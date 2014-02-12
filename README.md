@@ -23,7 +23,7 @@ Windows
 Mockup / Prototype
 ============
 https://drive.google.com/folderview?id=0B0NsS2a-Qx8ZMms4OHVPaWpCQkk&usp=sharing
-https://g0v.github.io/don-press/public
+http://g0v.github.io/don-press/public/
 
 License
 ============
