@@ -109,31 +109,31 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   font-weight: bold;
   margin: 0;
 }
-#content .question {
+#content > .question {
   padding: 0.3rem 0;
   border-bottom: 1px #cccccc solid;
 }
-#content .question.new {
+#content > .question.new {
   width: 100%;
   margin: 0.5rem 0;
   border: none;
 }
-#content .question.new input {
+#content > .question.new input {
   border: 2px #cccccc dashed;
 }
-#content .question.new input .icon {
+#content > .question.new input .icon {
   padding: 1rem;
 }
-#content .question .count {
+#content > .question .count {
   margin: 0;
 }
-#content .question .title {
+#content > .question .title {
   display: inline;
 }
-#content .question .roster {
+#content > .question .roster {
   float: right;
 }
-#content .question .roster .avatar {
+#content > .question .roster .avatar {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
@@ -141,16 +141,14 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   width: 2rem;
   height: 2rem;
 }
-#content .question .roster .avatar .icon {
+#content > .question .roster .avatar .icon {
   position: absolute;
   right: -0.5rem;
   top: -0.5rem;
-  padding: 0;
-  margin: 0;
 }
-#content .question .status {
+#content > .question .status {
   display: inline;
 }
-#content .question .status i.icon {
+#content > .question .status i.icon {
   padding: 0.6rem 0;
 }
