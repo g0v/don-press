@@ -56,11 +56,11 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   float: left;
 }
 #roster .board .statistic .attend {
-  background-color: green;
+  background-color: #a1cf64;
   color: white;
 }
 #roster .board .statistic .refuse {
-  background-color: red;
+  background-color: #d95c5c;
   color: white;
 }
 #roster .board .list {
@@ -78,10 +78,10 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   height: 5rem;
   background-color: #cccccc;
   text-align: center;
-  border: 3px white solid;
+  border: 2px white solid;
 }
 #roster .board .list .avatar .image .name {
-  padding: 0.3rem;
+  padding: 0.2rem 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
@@ -147,8 +147,7 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   top: -0.5rem;
 }
 #content > .question .status {
-  display: inline;
-}
-#content > .question .status i.icon {
-  padding: 0.6rem 0;
+  background: none;
+  width: 2rem;
+  height: 2rem;
 }
