@@ -20,8 +20,8 @@ block body
             | 拒絕出席
       .list
         .avatar
-          .image
-            img(src="")
+          .ui.image
+            img(src="img/kwc.jpg")
             .ui.bottom.attached.label.name 柯文哲
           .ui.label.status.gray
           .count
@@ -30,8 +30,8 @@ block body
             i.icon.question
             | 12
         .avatar
-          .image
-            img(src="")
+          .ui.image
+            img(src="img/gls.jpg")
             .ui.bottom.attached.label.name 顧立雄
           .ui.label.status.green
           .count
@@ -46,8 +46,8 @@ block body
             i.icon.star.red
             i.icon.star.red
         .avatar
-          .image
-            img(src="")
+          .ui.image
+            img(src="img/htt.jpg")
             .ui.bottom.attached.label.name 許添財
           .ui.label.status.gray
           .count
@@ -56,8 +56,8 @@ block body
             i.icon.question
             | 12
         .avatar
-          .image
-            img(src="")
+          .ui.image
+            img(src="img/fkw.jpg")
             .ui.bottom.attached.label.name 馮光遠
           .ui.label.status.green
           .count
@@ -72,7 +72,7 @@ block body
             i.icon.star.red
             i.icon.star.red
         .avatar
-          .image
+          .ui.image
             img(src="")
             .ui.bottom.attached.label.name 連勝文
           .ui.label.status.red
@@ -106,10 +106,14 @@ block body
         i.icon.attention.purple
       .title 文林苑的案子打算怎麼處理？
       .roster
-        a.item 柯文哲
-          i.icon.comment
-        a.item 許添財
-          i.icon.question
+        a.item
+          .ui.image.avatar.unknown
+            img(src="img/kwc.jpg")
+            i.icon.question
+        a.item
+          .ui.image.avatar.answer
+            img(src="img/htt.jpg")
+            i.icon.comment.green
         .ui.icon.button.small
           i.icon.add
     .question
@@ -120,12 +124,18 @@ block body
         i.icon.attention.red
       .title 文林苑的案子打算怎麼處理？
       .roster
-        a.item 柯文哲
-          i.icon.question
-        a.item 許添財
-          i.icon.question
-        a.item 顧立雄
-          i.icon.question
+        a.item
+          .ui.image.avatar.green
+            img(src="img/kwc.jpg")
+            i.icon.question
+        a.item
+          .ui.image.avatar
+            img(src="img/htt.jpg")
+            i.icon.question
+        a.item
+          .ui.image.avatar
+            img(src="img/gls.jpg")
+            i.icon.minus.sign.red
         .ui.icon.button.small
           i.icon.add
 

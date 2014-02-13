@@ -66,6 +66,8 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4
           border: 3px #fff solid
           .name
             padding: 0.3rem
+            background-color: rgba(#000,0.5)
+            color: #fff
         .status
           position: absolute
           margin: 0
@@ -102,8 +104,17 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4
       display: inline
     .roster
       float: right
-      .item
-        padding: 0.8rem 0.3rem
+      .avatar
+        +box-sizing(content-box)
+        border: 2px #ccc solid
+        width: 2rem
+        height: 2rem
+        .icon
+          position: absolute
+          right: -0.5rem
+          top: -0.5rem
+          padding: 0
+          margin: 0
     .status
       display: inline
       i.icon
