@@ -29,7 +29,7 @@ html
       | | 全民記者會
 
   body(ng-app="zeropress")
-    #navbar
+    nav#navbar
       .ui.secondary.pointing.menu.main
         .ui.dropdown.item.filter 全部
           i.icon.dropdown
@@ -41,9 +41,9 @@ html
             .item 監察委員
             .item 縣市議員
             .item 台北市長候選人
-        a.item.active 發問
-        a.item 作答
-        a.item 巨星排行榜
+        a.item.ask(href="ask.html") 發問
+        a.item.answer(href="answer.html") 作答
+        a.item.chart(href="chart.html") 巨星排行榜
         a.item.right 登入
         //.item.right
           .ui.icon.input
