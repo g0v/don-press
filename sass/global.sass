@@ -1,0 +1,33 @@
+@import compass/css3
+
+html
+  font-size: 18px
+
+html, body, div, h1, h2, h3, h4
+  margin: 0
+  padding: 0
+  line-height: 1em
+  +box-sizing(border-box)
+
+#navbar
+  height: 143px
+  background-color: #ccc
+  background: url("../img/nav.png") no-repeat center, url("../img/nav-repeat.png") repeat-x center
+  padding-top: 85px
+  .menu.main
+    width: 960px
+    margin: 0 auto
+    font-weight: bold
+    .item
+      border-bottom: 5px solid rgba(#c1272d,0)
+    .active
+      color: #000
+      border-color: #c1272d
+      background-color: rgba(#c1272d,0.1)
+  .filter
+    width: 170px
+    margin-right: 50px
+    .menu
+      background-color: #ffe6e7
+
+

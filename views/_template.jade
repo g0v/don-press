@@ -14,7 +14,7 @@ html
     //-script(type="text/javascript",src='//cdn.firebase.com/v0/firebase.js')
     //-script(type="text/javascript",src="//cdn.firebase.com/v0/firebase-simple-login.js")
     //-script(type="text/javascript",src="//cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js")
-    //-script(type="text/javascript",src="index.js")
+    //-script(type="text/javascript",src="js/global.js")
     //-script(type="text/javascript",src="app/controllers/controller.js")
     //-meta(http-equiv="X-UA-Compatible",content="IE=edge")
     //-meta(name="description",content="")
@@ -30,9 +30,22 @@ html
 
   body(ng-app="zeropress")
     #navbar
-      .ui.secondary.pointing.menu
-        a(href="index.html").item 全民記者會
-        .item.right
+      .ui.secondary.pointing.menu.main
+        .ui.dropdown.item.filter 全部
+          i.icon.dropdown
+          .menu
+            .item 全部
+            .item 中央各部會首長
+            .item 地方機關首長
+            .item 立法委員
+            .item 監察委員
+            .item 縣市議員
+            .item 台北市長候選人
+        a.item.active 發問
+        a.item 作答
+        a.item 巨星排行榜
+        a.item.right 登入
+        //.item.right
           .ui.icon.input
             input(type="text",placeholder="搜尋...",ng-model="keyword")
             i.search.link.icon
@@ -42,6 +55,6 @@ html
     #script
       script.
         window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
-      script(src="js/main.js")
+      script(src="js/global.js")
       block script
 
