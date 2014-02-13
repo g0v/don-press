@@ -22,12 +22,22 @@ block body
         .avatar
           .image
             img(src="")
-            .ui.bottom.attached.label.name 高嘉良
+            .ui.bottom.attached.label.name 柯文哲
+          .ui.label.status.gray
+          .count
+            i.icon.comment
+            | 0
+            i.icon.question
+            | 12
+        .avatar
+          .image
+            img(src="")
+            .ui.bottom.attached.label.name 顧立雄
           .ui.label.status.green
           .count
             i.icon.comment
             | 12
-            i.icon.comment
+            i.icon.question
             | 12
             br
             i.icon.star.green
@@ -38,12 +48,22 @@ block body
         .avatar
           .image
             img(src="")
-            .ui.bottom.attached.label.name 高嘉良
+            .ui.bottom.attached.label.name 許添財
+          .ui.label.status.gray
+          .count
+            i.icon.comment
+            | 0
+            i.icon.question
+            | 12
+        .avatar
+          .image
+            img(src="")
+            .ui.bottom.attached.label.name 馮光遠
           .ui.label.status.green
           .count
             i.icon.comment
             | 12
-            i.icon.comment
+            i.icon.question
             | 12
             br
             i.icon.star.green
@@ -54,20 +74,63 @@ block body
         .avatar
           .image
             img(src="")
-            .ui.bottom.attached.label.name 高嘉良
-          .ui.label.status.green
+            .ui.bottom.attached.label.name 連勝文
+          .ui.label.status.red
           .count
             i.icon.comment
+            | 0
+            i.icon.question
             | 12
-            i.icon.comment
-            | 12
-            br
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.red
-            i.icon.star.red
+  #content
+    .ui.secondary.pointing.menu.filter
+      .ui.dropdown.item 所有類別 (1024)
+        i.icon.dropdown
+        .menu
+          .item 所有類別
+      a.item.hot 熱門
+      a.item.new 最新
+      a.item.blame 怨念榜
+      a.item.bad 劣退榜
+      a.item.chart 懸浮微粒
+      .item.right
+        .ui.icon.input
+          input(type="text",placeholder="搜尋...",ng-model="keyword")
+          i.search.link.icon
+    .question.new.ui.icon.input
+      input(type="text",placeholder="新問題...（一邊打字底下清單會一邊過濾出可能重複的類似問題）")
+    .question
+      .ui.icon.labeled.button.small.active.green 集氣中
+        i.icon.thumbs.up
+      .ui.left.pointing.label.count 999
+      .title 文林苑的案子打算怎麼處理？
+      .roster
+        a.item 柯文哲
+          i.icon.comment
+        a.item 許添財
+          i.icon.question
+        .ui.icon.button.small
+          i.icon.add
+      .status
+        i.icon.attention.red
+    .question
+      .ui.icon.labeled.button.small 一起問
+        i.icon.thumbs.up
+      .ui.left.pointing.label.count 999
+      .title 文林苑的案子打算怎麼處理？
+      .roster
+        a.item 柯文哲
+          i.icon.question
+        a.item 許添財
+          i.icon.question
+        a.item 顧立雄
+          i.icon.question
+        .ui.icon.button.small
+          i.icon.add
+      .status
+        i.icon.attention.purple
+
 
 block script
   script.
     $("#navbar .ask").addClass("active");
+    $("#content .filter .hot").addClass("active");

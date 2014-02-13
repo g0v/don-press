@@ -31,7 +31,7 @@ html
   body(ng-app="zeropress")
     nav#navbar
       .ui.secondary.pointing.menu.main
-        .ui.dropdown.item.filter 全部
+        .ui.dropdown.item.filter 台北市長候選人
           i.icon.dropdown
           .menu
             .item 全部
@@ -45,10 +45,6 @@ html
         a.item.answer(href="answer.html") 作答
         a.item.chart(href="chart.html") 巨星排行榜
         a.item.right 登入
-        //.item.right
-          .ui.icon.input
-            input(type="text",placeholder="搜尋...",ng-model="keyword")
-            i.search.link.icon
 
     block body
 

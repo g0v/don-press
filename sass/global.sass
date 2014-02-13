@@ -25,7 +25,7 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4
       border-color: #c1272d
       background-color: rgba(#c1272d,0.1)
   .filter
-    width: 170px
+    min-width: 170px
     margin-right: 50px
     .menu
       background-color: #ffe6e7
@@ -54,7 +54,7 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4
       overflow-x: auto
       padding: 1rem
       .avatar
-        display: inline-block
+        float: left
         position: relative
         margin-right: 1rem
         .image
@@ -79,3 +79,33 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4
           font-size: 0.85rem
           padding: 0.3rem
           text-align: center
+#content
+  width: 960px
+  margin: 0.5rem auto
+  .ui.menu.filter
+    font-weight: bold
+    margin: 0
+  .question
+    padding: 0.3rem 0
+    border-bottom: 1px #ccc solid
+    &.new
+      width: 100%
+      margin: 0.5rem 0
+      border: none
+      input
+        border: 2px #ccc dashed
+        .icon
+          padding: 1rem
+    .count
+      margin: 0
+    .title
+      display: inline
+      margin-left: 1rem
+    .roster
+      float: right
+      .item
+        padding: 0.8rem 0.3rem
+    .status
+      float: right
+      i.icon
+        padding: 0.6rem 0

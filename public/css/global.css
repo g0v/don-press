@@ -31,7 +31,7 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   background-color: rgba(193, 39, 45, 0.1);
 }
 #navbar .filter {
-  width: 170px;
+  min-width: 170px;
   margin-right: 50px;
 }
 #navbar .filter .menu {
@@ -68,7 +68,7 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   padding: 1rem;
 }
 #roster .board .list .avatar {
-  display: inline-block;
+  float: left;
   position: relative;
   margin-right: 1rem;
 }
@@ -97,4 +97,47 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   font-size: 0.85rem;
   padding: 0.3rem;
   text-align: center;
+}
+
+#content {
+  width: 960px;
+  margin: 0.5rem auto;
+}
+#content .ui.menu.filter {
+  font-weight: bold;
+  margin: 0;
+}
+#content .question {
+  padding: 0.3rem 0;
+  border-bottom: 1px #cccccc solid;
+}
+#content .question.new {
+  width: 100%;
+  margin: 0.5rem 0;
+  border: none;
+}
+#content .question.new input {
+  border: 2px #cccccc dashed;
+}
+#content .question.new input .icon {
+  padding: 1rem;
+}
+#content .question .count {
+  margin: 0;
+}
+#content .question .title {
+  display: inline;
+  margin-left: 1rem;
+}
+#content .question .roster {
+  float: right;
+}
+#content .question .roster .item {
+  padding: 0.8rem 0.3rem;
+}
+#content .question .status {
+  float: right;
+}
+#content .question .status i.icon {
+  padding: 0.6rem 0;
 }
