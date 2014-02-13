@@ -127,7 +127,6 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
 }
 #content .question .title {
   display: inline;
-  margin-left: 1rem;
 }
 #content .question .roster {
   float: right;
@@ -136,7 +135,7 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   padding: 0.8rem 0.3rem;
 }
 #content .question .status {
-  float: right;
+  display: inline;
 }
 #content .question .status i.icon {
   padding: 0.6rem 0;
