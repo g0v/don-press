@@ -1,0 +1,27 @@
+{
+  "name": "don-press",
+  "version": "0.0.1",
+  "description": "don-press",
+  "scripts": {
+    "start": "gulp --require LiveScript",
+    "dev": "gulp --require LiveScript dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g0v/don-press.git"
+  },
+  "bugs": {
+    "url": "https://github.com/g0v/don-press/issues"
+  },
+  "homepage": "https://github.com/g0v/don-press",
+  "devDependencies": {
+    "gulp": "~3.5.2",
+    "gulp-jade": "~0.4.1",
+    "gulp-livereload": "~1.1.1",
+    "gulp-ruby-sass": "~0.3.0",
+    "gulp-util": "~2.2.14",
+    "LiveScript": "~1.2.0",
+    "tiny-lr": "~0.0.5"
+  }
+}
