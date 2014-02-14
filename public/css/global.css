@@ -191,6 +191,9 @@ a, a:link {
 #content.question .roster {
   margin: 0.5rem 0;
 }
+#content.question .roster .icon.star {
+  color: #cccccc;
+}
 #content.question .roster .summary a {
   width: 256px;
   display: inline-block;
