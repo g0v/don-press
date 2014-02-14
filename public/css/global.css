@@ -11,6 +11,10 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
   box-sizing: border-box;
 }
 
+p {
+  line-height: 1.5em;
+}
+
 a, a:link {
   text-decoration: none;
   color: inherit;
@@ -171,21 +175,59 @@ a, a:link {
 #content.ask > .question .roster {
   float: right;
 }
-#content.question .author {
+#content.question .header .author {
   float: right;
+}
+#content.question .meta .group {
+  display: inline-block;
+  margin-right: 1rem;
+}
+#content.question .meta .status {
+  margin: 0 -0.25rem;
 }
 #content.question .roster {
   margin: 0.5rem 0;
 }
-#content.question .status {
-  margin: 0 -0.25rem;
-}
-#content.question .group {
+#content.question .roster .summary a {
+  width: 256px;
   display: inline-block;
-  margin-right: 1rem;
-}
-#content.question .summary {
-  overflow: hidden;
+  overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+#content.question .answer .image {
+  width: 3rem;
+  height: 3rem;
+  float: left;
+}
+#content.question .answer .content {
+  line-height: 1.5em;
+  margin-left: 4rem;
+  padding-top: 0.5rem;
+}
+#content.question .answer .score {
+  float: right;
+}
+#content.question .answer .score .vote {
+  display: inline-block;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: #eeeeee;
+}
+#content.question .answer .score .vote .yes {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #a1cf64;
+}
+#content.question .answer .score .vote .no {
+  float: right;
+  width: 30%;
+  height: 100%;
+  background-color: #d95c5c;
+}
+#content.question .answer .rate {
+  margin: 0.5rem auto 0;
+  text-align: center;
+  font-size: 2rem;
 }

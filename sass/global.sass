@@ -9,6 +9,9 @@ html, body, div, nav, section, article, header, footer, h1, h2, h3, h4
   line-height: 1em
   +box-sizing(border-box)
 
+p
+  line-height: 1.5em
+
 a,a:link
   text-decoration: none
   color: inherit
@@ -132,16 +135,51 @@ a,a:link
       .roster
         float: right
   &.question
-    .author
-      float: right
+    .header
+      .author
+        float: right
+    .meta
+      .group
+        display: inline-block
+        margin-right: 1rem
+      .status
+        margin: 0 -0.25rem
     .roster
       margin: 0.5rem 0
-    .status
-      margin: 0 -0.25rem
-    .group
-      display: inline-block
-      margin-right: 1rem
-    .summary
-      overflow: hidden
-      white-space: nowrap
-      text-overflow: ellipsis
+      .summary
+        a
+          width: 256px
+          display: inline-block
+          overflow-x: hidden
+          white-space: nowrap
+          text-overflow: ellipsis
+    .answer
+      .image
+        width: 3rem
+        height: 3rem
+        float: left
+      .content
+        line-height: 1.5em
+        margin-left: 4rem
+        padding-top: 0.5rem
+      .score
+        float: right
+        .vote
+          display: inline-block
+          width: 5rem
+          height: 0.5rem
+          background-color: #eee
+          .yes
+            float: left
+            width: 50%
+            height: 100%
+            background-color: #A1CF64
+          .no
+            float: right
+            width: 30%
+            height: 100%
+            background-color: #D95C5C
+      .rate
+        margin: 0.5rem auto 0
+        text-align: center
+        font-size: 2rem
