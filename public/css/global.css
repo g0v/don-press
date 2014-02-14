@@ -1,5 +1,7 @@
 html {
   font-size: 18px;
+  font-family: "微軟正黑體", sans-serif;
+  color: #333333;
 }
 
 html, body, div, nav, section, article, header, footer, h1, h2, h3, h4 {
@@ -170,6 +172,10 @@ a, a:link {
 }
 #content.ask > .question.new input .icon {
   padding: 1rem;
+}
+#content.ask > .question.new .meta .group {
+  display: inline-block;
+  margin-right: 1rem;
 }
 #content.ask > .question .title {
   display: inline;

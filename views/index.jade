@@ -20,7 +20,28 @@ block content
           input(type="text",placeholder="搜尋...",ng-model="keyword")
           i.search.link.icon
     .question.new.ui.icon.input
-      input(type="text",placeholder="新問題...（一邊打字底下清單會一邊過濾出可能重複的類似問題）")
+      input.title(type="text",placeholder="新問題...（一邊打字底下清單會一邊過濾出可能重複的類似問題）")
+      .meta
+        .group 選區
+          .ui.selection.dropdown
+            input(type="hidden",name="area")
+            .default.text 台北市
+            i.dropdown.icon
+            .menu
+              .item(value="") 台北市
+              .item(value="") 台北市
+              .item(value="") 台北市
+        .group 類別
+          .ui.selection.dropdown
+            input(type="hidden",name="category")
+            .default.text 住房
+            i.dropdown.icon
+            .menu
+              .item(value="") 台北市
+              .item(value="") 台北市
+              .item(value="") 台北市
+        .group 關鍵字
+          input(type="text",placeholder="")
     .question
       .ui.icon.labeled.button.small.active.green 已連署
         i.icon.thumbs.up
