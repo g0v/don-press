@@ -1,0 +1,116 @@
+extends _template
+
+block title
+  | 首頁
+
+block body
+  #content.question
+    header
+      a.author(href="") 都更受害者聯盟
+        br
+        | 2014/02/14
+      h1 文林苑的案子打算怎麼處理？
+      p 描述問題背景，附上參考資料連結。
+    section.meta
+      .group
+        .ui.icon.labeled.button.small 加入連署
+          i.icon.thumbs.up
+        .ui.left.pointing.label.count 99
+      .group
+        | 怨念指數
+        .ui.image.status
+          img(src="img/blame.png")
+        .ui.image.status
+          img(src="img/blame.png")
+        .ui.image.status
+          img(src="img/blame.png")
+      .group
+        | 地區
+        .ui.label 台北市
+        | 類別
+        .ui.label 住房
+        | 關鍵字
+        .ui.label 文林苑
+      table.ui.table.roster
+        thead: tr
+          th.five.wide 人物
+          th.three.wide 作答
+          th.three.wide 得分
+          th 摘要
+        tbody
+          tr
+            td
+              .ui.image.avatar
+                img(src="img/fkw.jpg")
+                i.icon.comment.green
+              | 台北市長候選人馮光遠
+            td
+              .ui.label.green 親自作答
+            td: i.icon.star
+            td.summary
+              a.text.link(href="") 摘要，按了以後跳到本頁下方回答處
+          tr
+            td
+              .ui.image.avatar
+                img(src="img/gls.jpg")
+                i.icon.comment.green
+              | 台北市長候選人顧立雄
+            td
+              .ui.label.green 網友轉述作答
+            td: i.icon.star
+            td.summary
+              a.text.link(href="") 摘要，按了以後跳到本頁下方回答處
+          tr
+            td
+              .ui.image.avatar.green
+                img(src="img/kwc.jpg")
+                i.icon.question
+              | 台北市長候選人柯文哲
+            td
+              .ui.label.gray 尚未回答
+            td: i.icon.star
+            td.summary
+              a.text.link(href="") 摘要，按了以後跳到本頁下方回答處
+          tr
+            td
+              .ui.image.avatar
+                img(src="img/htt.jpg")
+                i.icon.question
+              | 台北市長候選人許添財
+            td
+              .ui.label.gray 尚未回答
+            td: i.icon.star
+            td.summary
+              a.text.link(href="") 摘要，按了以後跳到本頁下方回答處
+          tr
+            td
+              .ui.image.avatar
+                img(src="")
+                i.icon.minus.sign.red
+              | 台北市長候選人連勝文
+            td
+              .ui.label.red 拒絕作答
+            td: i.icon.star
+            td.summary
+              a.text.link(href="") 摘要，按了以後跳到本頁下方回答處
+          tr
+            td
+              .ui.image.avatar
+                img(src="")
+                i.icon.minus.sign.red
+              | 台北市長郝龍斌
+            td
+              .ui.label.red 拒絕作答
+            td: i.icon.star
+            td.summary
+              a.text.link(href="") 摘要，按了以後跳到本頁下方回答處
+        tfoot
+          tr: th(colspan="4")
+            .ui.icon.labeled.button.small 邀請更多人作答
+              i.icon.add
+    section.answer
+
+block script
+  script.
+    $("#navbar .ask").addClass("active");
+    $("#content .filter .hot").addClass("active");

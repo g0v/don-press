@@ -31,18 +31,24 @@ html
   body(ng-app="zeropress")
     nav#navbar
       .ui.secondary.pointing.menu.main
-        .ui.dropdown.item.filter 台北市長候選人
+        .ui.dropdown.item.filter 台北市
           i.icon.dropdown
           .menu
-            .item 全部
-            .item 中央各部會首長
-            .item 地方機關首長
-            .item 立法委員
-            .item 監察委員
-            .item 縣市議員
-            .item 台北市長候選人
-        a.item.ask(href="ask.html") 發問
-        a.item.answer(href="answer.html") 作答
+            //-.item 全部
+            //-.item 中央各部會首長
+            //-.item 地方機關首長
+            //-.item 立法委員
+            //-.item 監察委員
+            //-.item 縣市議員
+            .item 台北市
+            .item 新北市
+            .item 台中市
+            .item 台南市
+            .item 高雄市
+            .item 台東市
+            .item 花蓮市
+        a.item.ask(href="index.html") 出題
+        a.item.answer(href="answer.html") 給分
         a.item.chart(href="chart.html") 巨星排行榜
         a.item.right 登入
 

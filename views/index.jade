@@ -1,87 +1,10 @@
-extends _template
+extends _ask
 
 block title
   | 首頁
 
-block body
-
-  #roster
-    .board
-      .statistic
-        .ui.list
-          .item
-            .ui.label.attend 4
-            | 出席中
-          .item
-            .ui.label.gray 3
-            | 尚未回應邀請
-          .item
-            .ui.label.refuse 1
-            | 拒絕出席
-      .list
-        .avatar
-          .ui.image
-            img(src="img/kwc.jpg")
-            .ui.bottom.attached.label.name 柯文哲
-          .ui.label.status.gray
-          .count
-            i.icon.comment
-            | 0
-            i.icon.question
-            | 12
-        .avatar
-          .ui.image
-            img(src="img/gls.jpg")
-            .ui.bottom.attached.label.name 顧立雄
-          .ui.label.status.green
-          .count
-            i.icon.comment
-            | 12
-            i.icon.question
-            | 12
-            br
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.red
-            i.icon.star.red
-        .avatar
-          .ui.image
-            img(src="img/htt.jpg")
-            .ui.bottom.attached.label.name 許添財
-          .ui.label.status.gray
-          .count
-            i.icon.comment
-            | 0
-            i.icon.question
-            | 12
-        .avatar
-          .ui.image
-            img(src="img/fkw.jpg")
-            .ui.bottom.attached.label.name 馮光遠
-          .ui.label.status.green
-          .count
-            i.icon.comment
-            | 12
-            i.icon.question
-            | 12
-            br
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.red
-            i.icon.star.red
-        .avatar
-          .ui.image
-            img(src="")
-            .ui.bottom.attached.label.name 連勝文
-          .ui.label.status.red
-          .count
-            i.icon.comment
-            | 0
-            i.icon.question
-            | 12
-  #content
+block content
+  #content.ask
     .ui.secondary.pointing.menu.filter
       .ui.dropdown.item 所有類別 (1024)
         i.icon.dropdown
@@ -89,8 +12,8 @@ block body
           .item 所有類別
       a.item.hot 熱門
       a.item.new 最新
-      a.item.blame 怨念榜
-      a.item.bad 劣退榜
+      a.item.blame 最受期待
+      a.item.bad 最多退稿
       a.item.chart 懸浮微粒
       .item.right
         .ui.icon.input
@@ -99,12 +22,12 @@ block body
     .question.new.ui.icon.input
       input(type="text",placeholder="新問題...（一邊打字底下清單會一邊過濾出可能重複的類似問題）")
     .question
-      .ui.icon.labeled.button.small.active.green 集氣中
+      .ui.icon.labeled.button.small.active.green 已連署
         i.icon.thumbs.up
       .ui.left.pointing.label.count 999
       .ui.image.status
         img(src="img/bad.png")
-      .title 文林苑的案子打算怎麼處理？
+      a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
       .roster
         a.item
           .ui.image.avatar.unknown
@@ -117,12 +40,12 @@ block body
         .ui.icon.button.small
           i.icon.add
     .question
-      .ui.icon.labeled.button.small 一起問
+      .ui.icon.labeled.button.small 加入連署
         i.icon.thumbs.up
-      .ui.left.pointing.label.count 999
+      .ui.left.pointing.label.count 99
       .ui.image.status
         img(src="img/blame.png")
-      .title 文林苑的案子打算怎麼處理？
+      a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
       .roster
         a.item
           .ui.image.avatar.green
