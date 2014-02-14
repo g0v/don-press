@@ -50,7 +50,13 @@ html
         a.item.ask(href="index.html") 出題
         a.item.answer(href="answer.html") 給分
         a.item.chart(href="chart.html") 巨星排行榜
-        a.item.right 登入
+        .ui.dropdown.item.right.user
+          img.ui.image.avatar(src="https://graph.facebook.com/1505331262/picture")
+          | WangShen Lu
+          i.icon.dropdown
+          .menu
+           .item 登出
+            //.item 登入
 
     block body
 

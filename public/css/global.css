@@ -39,12 +39,15 @@ a, a:link {
   border-color: #c1272d;
   background-color: rgba(193, 39, 45, 0.1);
 }
+#navbar .menu.main .user {
+  white-space: nowrap;
+}
+#navbar .menu.main .user .avatar {
+  margin: -0.5rem 0 -0.5rem -0.5rem;
+}
 #navbar .filter {
   min-width: 170px;
   margin-right: 50px;
-}
-#navbar .filter .menu {
-  background-color: #ffe6e7;
 }
 
 #roster {
@@ -208,19 +211,19 @@ a, a:link {
 #content.question .answer .score {
   float: right;
 }
-#content.question .answer .score .vote {
+#content.question .answer .score .support {
   display: inline-block;
   width: 5rem;
   height: 0.5rem;
   background-color: #eeeeee;
 }
-#content.question .answer .score .vote .yes {
+#content.question .answer .score .support .yes {
   float: left;
   width: 50%;
   height: 100%;
   background-color: #a1cf64;
 }
-#content.question .answer .score .vote .no {
+#content.question .answer .score .support .no {
   float: right;
   width: 30%;
   height: 100%;
@@ -230,4 +233,18 @@ a, a:link {
   margin: 0.5rem auto 0;
   text-align: center;
   font-size: 2rem;
+}
+#content.question .answer .rate .star {
+  color: #cccccc;
+}
+#content.question .answer .description {
+  text-align: center;
+  font-size: 1.2rem;
+}
+#content.question .answer .description .star {
+  display: none;
+}
+#content.question .answer .vote {
+  margin: 0.5rem auto 0;
+  text-align: center;
 }
