@@ -209,7 +209,6 @@ a, a:link {
 }
 #content .answer.in.list .content h2 {
   margin: -0.5rem 0 0.5rem 0;
-  border-bottom: 1px #cccccc solid;
 }
 #content .answer.in.list .content .score {
   float: right;
