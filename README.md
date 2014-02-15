@@ -11,10 +11,21 @@ Using:
 
 Install
 ============
+
+Linux (with gulp)
+------------
+* Install nodejs
+* Install dependencies
+  * npm i
+* Build
+  * npm run-script build # one-time build
+  * npm start # build and watch, useful in development
+* Set up web server to access public/
+
 Mac
 ------------
 
-Windows
+Windows (with Fire.app)
 ------------
 * now using Fire.app build views/ to public/
 * if build doesn't work: jade -w views -o public
