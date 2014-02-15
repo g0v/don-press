@@ -117,8 +117,6 @@ a,a:link
   .avatar
     +box-sizing(content-box)
     border: 2px #ccc solid
-    width: 2rem
-    height: 2rem
     .icon
       position: absolute
       right: -0.5rem
@@ -136,65 +134,28 @@ a,a:link
     &:hover
       +border-radius(0.3rem)
       background-color: rgba(#000,0.05)
-  &.ask
-    &>.question
-      padding: 0.3rem 0
-      border-bottom: 1px #ccc solid
-      &.new
-        width: 100%
-        margin: 0.5rem 0
-        border: none
-        .title
-          border: 2px #ccc dashed
-          .icon
-            padding: 1rem
-        .description
-          margin: 0
-        .meta
-          .group
-            display: inline-block
-            margin-right: 1rem
-            .select
-              padding: 0.7em 1em
-              border: 1px solid rgba(0,0,0,.15)
-              +border-radius(0.3125em)
-      .title
-        display: inline
-      .roster
-        float: right
-  &.question
-    .header
-      .author
-        float: right
-    .meta
-      .group
-        display: inline-block
-        margin-right: 1rem
-      .status
-        margin: 0 -0.25rem
+  .question.in.list
+    padding: 0.3rem 0
+    border-bottom: 1px #ccc solid
+    .title
+      display: inline
     .roster
-      margin: 0.5rem 0
-      .icon.star
-        color: #ccc
-      .summary
-        a
-          width: 256px
-          display: inline-block
-          overflow-x: hidden
-          white-space: nowrap
-          text-overflow: ellipsis
-    .answer
-      margin-top: 1rem
-      border-top: 1px #ccc solid
-      padding-top: 1rem
-      .image
-        width: 3rem
-        height: 3rem
-        float: left
-      .content
-        line-height: 1.5em
-        margin-left: 4rem
-        padding-top: 0.5rem
+      float: right
+  .answer.in.list
+    margin-top: 1rem
+    border-top: 1px #ccc dashed
+    padding-top: 1rem
+    &:first-child
+      border-top: none
+      padding-top: 0
+    .image
+      width: 3rem
+      height: 3rem
+      float: left
+    .content
+      line-height: 1.5em
+      margin-left: 4rem
+      padding-top: 0.5rem
       .score
         float: right
         .support
@@ -212,17 +173,62 @@ a,a:link
             width: 30%
             height: 100%
             background-color: #D95C5C
-      .rate
-        margin: 0.5rem auto 0
-        text-align: center
-        font-size: 2rem
-        .star
-          color: #ccc
+      .action
+        .column
+          margin: 0
+          .rate
+            margin: 0.5rem auto 0
+            text-align: center
+            font-size: 2rem
+            .star
+              color: #ccc
+          .description
+            text-align: center
+            font-size: 1.2rem
+            .star
+              display: none
+          .vote
+            margin: 0.5rem auto 0
+            text-align: center
+  &.ask
+    .question.new
+      width: 100%
+      margin: 0.5rem 0
+      border: none
+      .title
+        border: 2px #ccc dashed
+        .icon
+          padding: 1rem
       .description
-        text-align: center
-        font-size: 1.2rem
-        .star
-          display: none
-      .vote
-        margin: 0.5rem auto 0
-        text-align: center
+        margin: 0
+      .meta
+        .group
+          display: inline-block
+          margin-right: 1rem
+          .select
+            padding: 0.7em 1em
+            border: 1px solid rgba(0,0,0,.15)
+            +border-radius(0.3125em)
+  &.question
+    .header
+      .author
+        float: right
+    .meta
+      .group
+        display: inline-block
+        margin-right: 1rem
+      .status
+        margin: 0 -0.25rem
+      .roster
+        margin: 0.5rem 0
+        .icon.star
+          color: #ccc
+        .summary
+          a
+            width: 256px
+            display: inline-block
+            overflow-x: hidden
+            white-space: nowrap
+            text-overflow: ellipsis
+    .related
+      margin: 1rem 0

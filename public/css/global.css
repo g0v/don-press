@@ -151,8 +151,6 @@ a, a:link {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   border: 2px #cccccc solid;
-  width: 2rem;
-  height: 2rem;
 }
 #content .avatar .icon {
   position: absolute;
@@ -180,29 +178,97 @@ a, a:link {
   border-radius: 0.3rem;
   background-color: rgba(0, 0, 0, 0.05);
 }
-#content.ask > .question {
+#content .question.in.list {
   padding: 0.3rem 0;
   border-bottom: 1px #cccccc solid;
 }
-#content.ask > .question.new {
+#content .question.in.list .title {
+  display: inline;
+}
+#content .question.in.list .roster {
+  float: right;
+}
+#content .answer.in.list {
+  margin-top: 1rem;
+  border-top: 1px #cccccc dashed;
+  padding-top: 1rem;
+}
+#content .answer.in.list:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+#content .answer.in.list .image {
+  width: 3rem;
+  height: 3rem;
+  float: left;
+}
+#content .answer.in.list .content {
+  line-height: 1.5em;
+  margin-left: 4rem;
+  padding-top: 0.5rem;
+}
+#content .answer.in.list .content .score {
+  float: right;
+}
+#content .answer.in.list .content .score .support {
+  display: inline-block;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: #eeeeee;
+}
+#content .answer.in.list .content .score .support .yes {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #a1cf64;
+}
+#content .answer.in.list .content .score .support .no {
+  float: right;
+  width: 30%;
+  height: 100%;
+  background-color: #d95c5c;
+}
+#content .answer.in.list .content .action .column {
+  margin: 0;
+}
+#content .answer.in.list .content .action .column .rate {
+  margin: 0.5rem auto 0;
+  text-align: center;
+  font-size: 2rem;
+}
+#content .answer.in.list .content .action .column .rate .star {
+  color: #cccccc;
+}
+#content .answer.in.list .content .action .column .description {
+  text-align: center;
+  font-size: 1.2rem;
+}
+#content .answer.in.list .content .action .column .description .star {
+  display: none;
+}
+#content .answer.in.list .content .action .column .vote {
+  margin: 0.5rem auto 0;
+  text-align: center;
+}
+#content.ask .question.new {
   width: 100%;
   margin: 0.5rem 0;
   border: none;
 }
-#content.ask > .question.new .title {
+#content.ask .question.new .title {
   border: 2px #cccccc dashed;
 }
-#content.ask > .question.new .title .icon {
+#content.ask .question.new .title .icon {
   padding: 1rem;
 }
-#content.ask > .question.new .description {
+#content.ask .question.new .description {
   margin: 0;
 }
-#content.ask > .question.new .meta .group {
+#content.ask .question.new .meta .group {
   display: inline-block;
   margin-right: 1rem;
 }
-#content.ask > .question.new .meta .group .select {
+#content.ask .question.new .meta .group .select {
   padding: 0.7em 1em;
   border: 1px solid rgba(0, 0, 0, 0.15);
   -webkit-border-radius: 0.3125em;
@@ -210,12 +276,6 @@ a, a:link {
   -ms-border-radius: 0.3125em;
   -o-border-radius: 0.3125em;
   border-radius: 0.3125em;
-}
-#content.ask > .question .title {
-  display: inline;
-}
-#content.ask > .question .roster {
-  float: right;
 }
 #content.question .header .author {
   float: right;
@@ -227,71 +287,19 @@ a, a:link {
 #content.question .meta .status {
   margin: 0 -0.25rem;
 }
-#content.question .roster {
+#content.question .meta .roster {
   margin: 0.5rem 0;
 }
-#content.question .roster .icon.star {
+#content.question .meta .roster .icon.star {
   color: #cccccc;
 }
-#content.question .roster .summary a {
+#content.question .meta .roster .summary a {
   width: 256px;
   display: inline-block;
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-#content.question .answer {
-  margin-top: 1rem;
-  border-top: 1px #cccccc solid;
-  padding-top: 1rem;
-}
-#content.question .answer .image {
-  width: 3rem;
-  height: 3rem;
-  float: left;
-}
-#content.question .answer .content {
-  line-height: 1.5em;
-  margin-left: 4rem;
-  padding-top: 0.5rem;
-}
-#content.question .answer .score {
-  float: right;
-}
-#content.question .answer .score .support {
-  display: inline-block;
-  width: 5rem;
-  height: 0.5rem;
-  background-color: #eeeeee;
-}
-#content.question .answer .score .support .yes {
-  float: left;
-  width: 50%;
-  height: 100%;
-  background-color: #a1cf64;
-}
-#content.question .answer .score .support .no {
-  float: right;
-  width: 30%;
-  height: 100%;
-  background-color: #d95c5c;
-}
-#content.question .answer .rate {
-  margin: 0.5rem auto 0;
-  text-align: center;
-  font-size: 2rem;
-}
-#content.question .answer .rate .star {
-  color: #cccccc;
-}
-#content.question .answer .description {
-  text-align: center;
-  font-size: 1.2rem;
-}
-#content.question .answer .description .star {
-  display: none;
-}
-#content.question .answer .vote {
-  margin: 0.5rem auto 0;
-  text-align: center;
+#content.question .related {
+  margin: 1rem 0;
 }
