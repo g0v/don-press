@@ -32,48 +32,11 @@ html
     nav#navbar
       .ui.secondary.pointing.menu.main
         .ui.dropdown.item.filter 台北市
-          i.icon.dropdown
-          .menu
-            //-.item 全部
-            //-.item 中央各部會首長
-            //-.item 地方機關首長
-            //-.item 立法委員
-            //-.item 監察委員
-            //-.item 縣市議員
-            .item 全國
-            .item 直轄市 (6)
-              .menu
-                .item 台北市
-                .item 新北市
-                .item 桃園市
-                .item 台中市
-                .item 台南市
-                .item 高雄市
-            .item 省轄市 (3)
-              .menu
-                .item 基隆市
-                .item 新竹市
-                .item 嘉義市
-            .item 縣 (14)
-              .menu
-                .item 桃園縣
-                .item 新竹縣
-                .item 苗栗縣
-                .item 彰化縣
-                .item 南投縣
-                .item 雲林縣
-                .item 嘉縣縣
-                .item 屏縣縣
-                .item 宜蘭縣
-                .item 花蓮縣
-                .item 台東縣
-                .item 澎湖縣
-                .item 金門縣
-                .item 連江縣
+          include geomenu
         a.item.ask(href="index.html") 出題
-        a.item.answer(href="answer.html") 答題
+        a.item.answer(href="answer.html") 給分
         a.item.chart(href="roster.html") 風雲人物
-        a.item.tag(href="tag.html") 關鍵字
+        a.item.tag(href="tag.html") 社會事件
         .ui.dropdown.item.right.user
           // 登入
           img.ui.image.avatar(src="https://graph.facebook.com/1505331262/picture")

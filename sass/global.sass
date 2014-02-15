@@ -19,6 +19,7 @@ a,a:link
   color: inherit
 
 #navbar
+  min-width: 960px
   height: 136px
   background-color: #ccc
   background: url("../img/nav.png") no-repeat center top, url("../img/nav-repeat.png") repeat-x center
@@ -42,6 +43,11 @@ a,a:link
     margin-right: 50px
     //.menu
       background-color: #ffe6e7
+
+.geo.menu.vertical
+  width: 170px
+.ui.vertical.menu .item>.menu>.item
+  font-size: 0.8rem
 
 #roster
   background: url("../img/roster-repeat.png"), linear-gradient(#a67c52, rgba(#754c24,1))
@@ -148,6 +154,10 @@ a,a:link
           .group
             display: inline-block
             margin-right: 1rem
+            .select
+              padding: 0.7em 1em
+              border: 1px solid rgba(0,0,0,.15)
+              +border-radius(0.3125em)
       .title
         display: inline
       .roster
@@ -174,6 +184,9 @@ a,a:link
           white-space: nowrap
           text-overflow: ellipsis
     .answer
+      margin-top: 1rem
+      border-top: 1px #ccc solid
+      padding-top: 1rem
       .image
         width: 3rem
         height: 3rem

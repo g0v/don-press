@@ -23,6 +23,7 @@ a, a:link {
 }
 
 #navbar {
+  min-width: 960px;
   height: 136px;
   background-color: #cccccc;
   background: url("../img/nav.png") no-repeat center top, url("../img/nav-repeat.png") repeat-x center;
@@ -50,6 +51,14 @@ a, a:link {
 #navbar .filter {
   min-width: 170px;
   margin-right: 50px;
+}
+
+.geo.menu.vertical {
+  width: 170px;
+}
+
+.ui.vertical.menu .item > .menu > .item {
+  font-size: 0.8rem;
 }
 
 #roster {
@@ -193,6 +202,15 @@ a, a:link {
   display: inline-block;
   margin-right: 1rem;
 }
+#content.ask > .question.new .meta .group .select {
+  padding: 0.7em 1em;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 0.3125em;
+  -moz-border-radius: 0.3125em;
+  -ms-border-radius: 0.3125em;
+  -o-border-radius: 0.3125em;
+  border-radius: 0.3125em;
+}
 #content.ask > .question .title {
   display: inline;
 }
@@ -221,6 +239,11 @@ a, a:link {
   overflow-x: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+#content.question .answer {
+  margin-top: 1rem;
+  border-top: 1px #cccccc solid;
+  padding-top: 1rem;
 }
 #content.question .answer .image {
   width: 3rem;
