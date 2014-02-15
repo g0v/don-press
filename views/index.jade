@@ -9,7 +9,26 @@ block content
       .ui.dropdown.item 所有類別 (1024)
         i.icon.dropdown
         .menu
-          .item 所有類別
+          .item 所有類別 (1024)
+          .item 國防、外交 (99)
+          .item 民主、司法、法制 (99)
+          .item 財政、稅制 (99)
+          .item 開放政府資料 (99)
+          .item 科技、網路 (99)
+          .item 教育、文化 (99)
+          .item 大眾傳播、媒體 (99)
+          .item 人權、性別、少數族裔 (99)
+          .item 社會福利、殘障、弱勢 (99)
+          .item 醫療、保健、衛生 (99)
+          .item 環境、生態、水土保持 (99)
+          .item 能源、氣候 (99)
+          .item 農業、糧食、食品安全 (99)
+          .item 土地、都市計畫、住房 (99)
+          .item 交通 (99)
+          .item 就業、經濟 (99)
+          .item 產業、原物料、廢棄物 (99)
+          .item 治安、犯罪 (99)
+          .item 休閒、運動、娛樂 (99)
       a.item.hot 熱門
       a.item.new 最新
       a.item.blame 最迫切
@@ -19,8 +38,11 @@ block content
         .ui.icon.input
           input(type="text",placeholder="搜尋...",ng-model="keyword")
           i.search.link.icon
-    .question.new.ui.icon.input
-      input.title(type="text",placeholder="新問題...（一邊打字底下清單會一邊過濾出可能重複的類似問題）")
+    .question.new.ui.form
+      .ui.input
+        input.title(type="text",placeholder="新問題...（一邊打字底下清單會一邊過濾出可能重複的類似問題…elastic search?）")
+      .field
+        textarea(placeholder="詳細描述、參考連結")
       .meta
         .group 選區
           .ui.selection.dropdown
@@ -36,12 +58,64 @@ block content
             input(type="hidden",name="category")
             .default.text 住房
             i.dropdown.icon
+            // ETBlue版
             .menu
-              .item(value="") 台北市
-              .item(value="") 台北市
-              .item(value="") 台北市
+              .item(value="") 國防、外交
+              .item(value="") 民主、司法、法制
+              .item(value="") 財政、稅制
+              .item(value="") 開放政府資料
+              .item(value="") 科技、網路
+              .item(value="") 教育、文化
+              .item(value="") 大眾傳播、媒體
+              .item(value="") 人權、性別、少數族裔
+              .item(value="") 社會福利、殘障、弱勢
+              .item(value="") 醫療、保健、衛生
+              .item(value="") 環境、生態、水土保持
+              .item(value="") 能源、氣候
+              .item(value="") 農業、糧食、食品安全
+              .item(value="") 土地、都市計畫、住房
+              .item(value="") 交通
+              .item(value="") 就業、經濟
+              .item(value="") 產業、原物料、廢棄物
+              .item(value="") 治安、犯罪
+              .item(value="") 休閒、運動、娛樂
+            // 模擬城市版
+            //.menu
+              .item(value="") 教育
+              .item(value="") 社福
+              .item(value="") 醫療
+              .item(value="") 環境
+              .item(value="") 就業與經濟
+              .item(value="") 交通
+              .item(value="") 住房
+              .item(value="") 治安
+              .item(value="") 科技網路
+            // airesis 版
+            //.menu
+              .item(value="") internal organization
+              .item(value="") 社交、運動、娛樂
+              .item(value="") 性別、家庭、兒童
+              .item(value="") 倫理、solidarity、心靈
+              .item(value="") 弱勢族群、殘障
+              .item(value="") 治安與法律
+              .item(value="") 國際事務、移民
+              .item(value="") 民主制度
+              .item(value="") 資訊、傳播
+              .item(value="") 藝術與文化
+              .item(value="") 教育、研究
+              .item(value="") 工作、自我實踐
+              .item(value="") 商業、金融、財稅
+              .item(value="") 保健、衛生
+              .item(value="") 產業、原物料與廢棄物
+              .item(value="") 能源、氣候
+              .item(value="") 都市發展、人口流動、建設
+              .item(value="") 領土、自然、動物
+              .item(value="") 水、食物、農業
         .group 關鍵字
-          input(type="text",placeholder="")
+          input(type="text",placeholder="最多一組（用來畫分布圖的，輸入時會自動跳出現有的關鍵字當建議）")
+        .group.right
+          .ui.icon.labeled.button 確定送出
+            i.icon.checkmark
     .question
       .ui.icon.labeled.button.small.active.green 已連署
         i.icon.thumbs.up

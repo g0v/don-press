@@ -167,11 +167,14 @@ a, a:link {
   margin: 0.5rem 0;
   border: none;
 }
-#content.ask > .question.new input {
+#content.ask > .question.new .title {
   border: 2px #cccccc dashed;
 }
-#content.ask > .question.new input .icon {
+#content.ask > .question.new .title .icon {
   padding: 1rem;
+}
+#content.ask > .question.new .meta {
+  margin-top: 0.5rem;
 }
 #content.ask > .question.new .meta .group {
   display: inline-block;
