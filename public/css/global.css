@@ -247,9 +247,6 @@ a, a:link {
   text-align: center;
   font-size: 1.2rem;
 }
-#content .answer.in.list .content .action .column .description .star {
-  display: none;
-}
 #content .answer.in.list .content .action .column .vote {
   margin: 0.5rem auto 0;
   text-align: center;
