@@ -65,9 +65,15 @@ a, a:link {
   -webkit-box-shadow: 0 2px 5px black;
   -moz-box-shadow: 0 2px 5px black;
   box-shadow: 0 2px 5px black;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 10rem;
 }
 #roster .board .statistic {
+  height: 9rem;
   float: left;
+  padding: 1rem;
 }
 #roster .board .statistic .attend {
   background-color: #a1cf64;
@@ -77,29 +83,36 @@ a, a:link {
   background-color: #d95c5c;
   color: white;
 }
-#roster .board .list {
-  overflow-x: auto;
-  padding: 1rem;
+#roster .board .roster {
+  overflow: auto;
+  height: 10rem;
+  margin-top: 0;
+  padding-top: 1rem;
 }
-#roster .board .list .avatar {
-  float: left;
-  margin-right: 1rem;
+#roster .board .roster .politician {
+  min-height: 9rem;
+  width: auto;
+  padding: 0;
+  background: none;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 0.5rem;
 }
-#roster .board .list .avatar .image {
-  position: relative;
+#roster .board .roster .politician .image {
   width: 5rem;
   height: 5rem;
-  background-color: #cccccc;
   text-align: center;
-  border: 2px white solid;
+  border: 1px rgba(255, 255, 255, 0.5) solid;
   margin: 0 auto;
 }
-#roster .board .list .avatar .image .name {
+#roster .board .roster .politician .image .name {
   padding: 0.2rem 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
-#roster .board .list .avatar .image .status {
+#roster .board .roster .politician .image .status {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -109,14 +122,18 @@ a, a:link {
   top: -0.3rem;
   border: 1px white solid !important;
 }
-#roster .board .list .avatar .count {
+#roster .board .roster .politician .count {
   font-size: 0.8rem;
   padding: 0.3rem 0;
   text-align: center;
-  margin: 0 auto;
+  line-height: 1.2em;
+}
+#roster .board .roster .politician .count .icon {
+  color: inherit;
 }
 
 #content {
+  clear: both;
   width: 960px;
   margin: 0.5rem auto;
 }
@@ -154,10 +171,6 @@ a, a:link {
   border-radius: 0.3rem;
   background-color: rgba(0, 0, 0, 0.05);
 }
-#content.ask .ui.menu.filter {
-  font-weight: bold;
-  margin: 0;
-}
 #content.ask > .question {
   padding: 0.3rem 0;
   border-bottom: 1px #cccccc solid;
@@ -174,11 +187,7 @@ a, a:link {
   padding: 1rem;
 }
 #content.ask > .question.new .description {
-  display: none;
-}
-#content.ask > .question.new .meta {
-  display: none;
-  margin-top: 0.5rem;
+  margin: 0;
 }
 #content.ask > .question.new .meta .group {
   display: inline-block;
@@ -186,7 +195,6 @@ a, a:link {
 }
 #content.ask > .question .title {
   display: inline;
-  font-weight: bold;
 }
 #content.ask > .question .roster {
   float: right;

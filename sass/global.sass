@@ -45,37 +45,44 @@ a,a:link
 
 #roster
   background: url("../img/roster-repeat.png"), linear-gradient(#a67c52, rgba(#754c24,1))
-  //padding-top: 0.5rem
   .board
     width: 960px
     margin: 0 auto
-    //background-color: #004524
     background-color: #333
     color: #eee
     border-bottom: 5px #ccc solid
     border-top: 1px rgba(#fff,0.5) solid
     +box-shadow(0 2px 5px rgba(#000,1))
+    +box-sizing(content-box)
+    height: 10rem
     .statistic
+      height: 9rem
       float: left
+      padding: 1rem
       .attend
         background-color: #A1CF64
         color: #fff
       .refuse
         background-color: #D95C5C
         color: #fff
-    .list
-      overflow-x: auto
-      padding: 1rem
-      .avatar
-        float: left
-        margin-right: 1rem
+    .roster
+      overflow: auto
+      height: 10rem
+      margin-top: 0
+      padding-top: 1rem
+      .politician
+        min-height: 9rem
+        width: auto
+        padding: 0
+        background: none
+        border: none
+        +box-shadow(none)
+        margin-bottom: 0.5rem
         .image
-          position: relative
           width: 5rem
           height: 5rem
-          background-color: #ccc
           text-align: center
-          border: 2px #fff solid
+          border: 1px rgba(#fff,0.5) solid
           margin: 0 auto
           .name
             padding: 0.2rem 0
@@ -94,8 +101,11 @@ a,a:link
           font-size: 0.8rem
           padding: 0.3rem 0
           text-align: center
-          margin: 0 auto
+          line-height: 1.2em
+          .icon
+            color: inherit
 #content
+  clear: both
   width: 960px
   margin: 0.5rem auto
   .avatar
@@ -121,9 +131,6 @@ a,a:link
       +border-radius(0.3rem)
       background-color: rgba(#000,0.05)
   &.ask
-    .ui.menu.filter
-      font-weight: bold
-      margin: 0
     &>.question
       padding: 0.3rem 0
       border-bottom: 1px #ccc solid
@@ -136,16 +143,13 @@ a,a:link
           .icon
             padding: 1rem
         .description
-          display: none
+          margin: 0
         .meta
-          display: none
-          margin-top: 0.5rem
           .group
             display: inline-block
             margin-right: 1rem
       .title
         display: inline
-        font-weight: bold
       .roster
         float: right
   &.question
