@@ -22,20 +22,24 @@ html
     //-link(rel="stylesheet",href="css/normalize.css")
     //-link(rel="stylesheet",href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Open+Sans:300italic,400,300,700")
     link(rel="stylesheet",href="css/global.css")
-    link(rel="stylesheet",href="css/home.css")
+    link(rel="stylesheet",href="css/tabmocracy.css")
+    script(src="//www.mozilla.org/tabzilla/media/js/tabzilla.js")
     block head
     title
       block title
       | | 全民記者會
 
   body(ng-app="zeropress")
+    nav#tabmocracy
+      a#tabzilla(href="http://g0v.tw/")
+        img(src="img/g0v-horizontal-transparent-darkbackground-s.png")
     nav#navbar
       .ui.secondary.pointing.menu.main
         .ui.dropdown.item.filter 台北市
           include geomenu
         a.item.ask(href="index.html") 出題
         a.item.answer(href="answer.html") 給分
-        a.item.chart(href="roster.html") 風雲人物
+        a.item.roster(href="roster.html") 風雲人物
         a.item.tag(href="tag.html") 社會事件
         .ui.dropdown.item.right.user
           // 登入

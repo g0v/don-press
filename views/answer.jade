@@ -10,8 +10,8 @@ block body
         include categorymenu
       a.item.hot 熱門
       a.item.new 最新
-      a.item.blame 得分最高
-      a.item.bad 支持度最高
+      a.item.rate 得分最高
+      a.item.support 支持度最高
       .item.right
         .ui.icon.input
           input(type="text",placeholder="搜尋...",ng-model="keyword")
@@ -22,7 +22,7 @@ block body
           a(href="")
             img(src="img/fkw.jpg")
         .content
-          h2 文林苑的案子打算怎麼處理？
+          h2: a(href="question.html") 文林苑的案子打算怎麼處理？
           .score
             | 本題得分
             i.icon.star.green
@@ -68,7 +68,7 @@ block body
           a(href="")
             img(src="img/htt.jpg")
         .content
-          h2 文林苑的案子打算怎麼處理？
+          h2: a(href="question.html") 文林苑的案子打算怎麼處理？
           .score
             | 本題得分
             i.icon.star.green

@@ -3,7 +3,7 @@ extends _template
 block body
 
   #roster
-    .board
+    .board.in.ask.page
       .statistic
         .ui.list
           .item
@@ -16,88 +16,106 @@ block body
             .ui.label.refuse 1
             | 拒絕出席
       .roster.ui.items
-        a.politician.item(href="politician.html")
+        a.politician.in.list.item(href="politician.html")
           .ui.image(href="politician.html")
             img(src="img/kwc.jpg")
             .ui.bottom.attached.label.name 柯文哲
-            .ui.label.status.gray
-          .count
-            | (台北市長候選人)
-            br
-            i.icon.comment
-            | 0 / 12
-        a.politician.item(href="politician.html")
+            .ui.label.online.status.gray
+          .info
+            | 台北市長候選人
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
           .ui.image(href="politician.html")
             img(src="img/gls.jpg")
             .ui.bottom.attached.label.name 顧立雄
-            .ui.label.status.green
-          .count
-            | (台北市長候選人)
-            br
-            i.icon.comment
-            | 12 / 12
-            br
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.red
-            i.icon.star.red
-        a.politician.item(href="politician.html")
+            .ui.label.online.status.green
+          .info
+            | 台北市長候選人
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
           .ui.image(href="politician.html")
             img(src="img/htt.jpg")
             .ui.bottom.attached.label.name 許添財
-            .ui.label.status.gray
-          .count
-            | (台北市長候選人)
-            br
-            i.icon.comment
-            | 0 / 12
-        a.politician.item(href="politician.html")
+            .ui.label.online.status.gray
+          .info
+            | 台北市長候選人
+            .count
+              i.icon.comment
+              | 0 / 12
+        a.politician.in.list.item(href="politician.html")
           .ui.image(href="politician.html")
             img(src="img/fkw.jpg")
             .ui.bottom.attached.label.name 馮光遠
-            .ui.label.status.green
-          .count
-            | (台北市長候選人)
-            br
-            i.icon.comment
-            | 12 / 12
-            br
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.green
-            i.icon.star.red
-            i.icon.star.red
-        a.politician.item(href="politician.html")
+            .ui.label.online.status.green
+          .info
+            | 台北市長候選人
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
           .ui.image(href="politician.html")
             img(src="")
             .ui.bottom.attached.label.name 連勝文
-            .ui.label.status.red
-          .count
-            | (台北市長候選人)
-            br
-            i.icon.comment
-            | 0 / 12
-        a.politician.item(href="politician.html")
+            .ui.label.online.status.red
+          .info
+            | 台北市長候選人
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
           .ui.image(href="politician.html")
             img(src="")
             .ui.bottom.attached.label.name 郝龍斌
-            .ui.label.status.red
-          .count
-            | (現任台北市長)
-            br
-            i.icon.comment
-            | 0 / 12
-        a.politician.item(href="politician.html")
+            .ui.label.online.status.red
+          .info
+            | 現任台北市長
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        //-a.politician.in.list.item(href="politician.html")
           .ui.image(href="politician.html")
             img(src="")
             .ui.bottom.attached.label.name 馬英九
-            .ui.label.status.red
-          .count
-            | (前一任台北市長)
-            br
-            i.icon.comment
-            | 0 / 12
+            .ui.label.online.status.red
+          .info
+            | 前一任台北市長)
+            .count
+              i.icon.comment
+              | 0 / 12
 
   block content
 

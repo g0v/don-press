@@ -22,6 +22,11 @@ a, a:link {
   color: inherit;
 }
 
+#tabmocracy {
+  width: 960px;
+  opacity: 0.8;
+}
+
 #navbar {
   min-width: 960px;
   height: 136px;
@@ -61,44 +66,7 @@ a, a:link {
   font-size: 0.8rem;
 }
 
-#roster {
-  background: url("../img/roster-repeat.png"), linear-gradient(#a67c52, #754c24);
-}
-#roster .board {
-  width: 960px;
-  margin: 0 auto;
-  background-color: #333333;
-  color: #eeeeee;
-  border-bottom: 5px #cccccc solid;
-  border-top: 1px rgba(255, 255, 255, 0.5) solid;
-  -webkit-box-shadow: 0 2px 5px black;
-  -moz-box-shadow: 0 2px 5px black;
-  box-shadow: 0 2px 5px black;
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-  height: 10rem;
-}
-#roster .board .statistic {
-  height: 9rem;
-  float: left;
-  padding: 1rem;
-}
-#roster .board .statistic .attend {
-  background-color: #a1cf64;
-  color: white;
-}
-#roster .board .statistic .refuse {
-  background-color: #d95c5c;
-  color: white;
-}
-#roster .board .roster {
-  overflow: auto;
-  height: 10rem;
-  margin-top: 0;
-  padding-top: 1rem;
-}
-#roster .board .roster .politician {
+.politician.in.list {
   min-height: 9rem;
   width: auto;
   padding: 0;
@@ -109,19 +77,19 @@ a, a:link {
   box-shadow: none;
   margin-bottom: 0.5rem;
 }
-#roster .board .roster .politician .image {
+.politician.in.list .image {
   width: 5rem;
   height: 5rem;
   text-align: center;
   border: 1px rgba(255, 255, 255, 0.5) solid;
   margin: 0 auto;
 }
-#roster .board .roster .politician .image .name {
+.politician.in.list .image .name {
   padding: 0.2rem 0;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
 }
-#roster .board .roster .politician .image .status {
+.politician.in.list .image .online.status {
   position: absolute;
   margin: 0;
   padding: 0;
@@ -131,14 +99,74 @@ a, a:link {
   top: -0.3rem;
   border: 1px white solid !important;
 }
-#roster .board .roster .politician .count {
+.politician.in.list .info {
   font-size: 0.8rem;
-  padding: 0.3rem 0;
   text-align: center;
+}
+.politician.in.list .info .name {
+  font-size: 1rem;
+  padding: 0.25rem 0;
+}
+.politician.in.list .info .online.status {
+  margin: 0.25rem 0;
+  padding: 0.25rem 0.5rem;
+}
+.politician.in.list .info .count {
+  padding: 0.3rem 0;
   line-height: 1.2em;
 }
-#roster .board .roster .politician .count .icon {
+.politician.in.list .info .count .icon {
   color: inherit;
+}
+
+#roster {
+  background: url("../img/roster-repeat.png"), linear-gradient(#a67c52, #754c24);
+}
+#roster .group.name {
+  clear: both;
+}
+#roster .board {
+  width: 960px;
+  background-color: #333333;
+  color: #eeeeee;
+  border-top: 1px rgba(255, 255, 255, 0.5) solid;
+  border-bottom: 5px #cccccc solid;
+  -webkit-box-shadow: 0 2px 5px black;
+  -moz-box-shadow: 0 2px 5px black;
+  box-shadow: 0 2px 5px black;
+}
+#roster .board.in.ask.page {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  margin: 0 auto;
+  height: 10rem;
+}
+#roster .board.in.ask.page .statistic {
+  height: 9rem;
+  float: left;
+  padding: 1rem;
+}
+#roster .board.in.ask.page .statistic .attend {
+  background-color: #a1cf64;
+  color: white;
+}
+#roster .board.in.ask.page .statistic .refuse {
+  background-color: #d95c5c;
+  color: white;
+}
+#roster .board.in.ask.page .roster {
+  overflow: auto;
+  height: 10rem;
+  margin-top: 0;
+  padding-top: 1rem;
+}
+#roster .board.in.roster.page {
+  margin-top: -1rem;
+  padding: 1rem;
+}
+#roster .board.in.roster.page .group.name {
+  color: #eeeeee;
 }
 
 #content {
@@ -157,12 +185,12 @@ a, a:link {
   right: -0.5rem;
   top: -0.5rem;
 }
-#content .status {
+#content .question.status {
   background: none;
   width: 2rem;
   height: 2rem;
 }
-#content .count {
+#content .petition.count {
   margin: 0 0 0 0.5rem;
   padding: 0.8em;
   font-size: 0.875rem;

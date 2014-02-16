@@ -1,0 +1,424 @@
+extends _template
+
+block title
+  | 風雲人物
+
+block body
+  #content.answer
+    .ui.secondary.pointing.menu.filter
+      .ui.dropdown.item 依職稱、級別
+        include rankmenu
+      a.item.hot 熱門
+      a.item.new 最活躍
+      a.item.rate 得分最高
+      a.item.support 最受支持
+      a.item.chart 分布圖
+      .item.right
+        .ui.icon.input
+          input(type="text",placeholder="搜尋...",ng-model="keyword")
+          i.search.link.icon
+    section#roster
+      .ui.items.board.in.roster.page
+        .ui.horizontal.divider.group.name 市長
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/kwc.jpg")
+            .ui.label.online.status.gray
+          .info
+            .name 柯文哲
+            .position 台北市長候選人
+            .online.status.ui.label.gray 尚未回應邀請
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/gls.jpg")
+            .ui.label.online.status.green
+          .info
+            .name 顧立雄
+            .position 台北市長候選人
+            .online.status.ui.label.green 出席中
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/htt.jpg")
+            .ui.label.online.status.gray
+          .info
+            .name 許添財
+            .position 台北市長候選人
+            .online.status.ui.label.gray 尚未回應邀請
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/fkw.jpg")
+            .ui.label.online.status.green
+          .info
+            .name 馮光遠
+            .position 台北市長候選人
+            .online.status.ui.label.green 出席中
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 連勝文
+            .position 台北市長候選人
+            .online.status.ui.label.red 拒絕出席
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 郝龍斌
+            .position 現任台北市長
+            .online.status.ui.label.red 拒絕出席
+            .count
+              i.icon.comment
+              | 0 / 12
+        .ui.horizontal.divider.group.name 局長
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/kwc.jpg")
+            .ui.label.online.status.gray
+          .info
+            .name 柯文哲
+            .position 台北市長候選人
+            .online.status.ui.label.gray 尚未回應邀請
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/gls.jpg")
+            .ui.label.online.status.green
+          .info
+            .name 顧立雄
+            .position 台北市長候選人
+            .online.status.ui.label.green 出席中
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/htt.jpg")
+            .ui.label.online.status.gray
+          .info
+            .name 許添財
+            .position 台北市長候選人
+            .online.status.ui.label.gray 尚未回應邀請
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/fkw.jpg")
+            .ui.label.online.status.green
+          .info
+            .name 馮光遠
+            .position 台北市長候選人
+            .online.status.ui.label.green 出席中
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 連勝文
+            .position 台北市長候選人
+            .online.status.ui.label.red 拒絕出席
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 郝龍斌
+            .position 現任台北市長
+            .online.status.ui.label.red 拒絕出席
+            .count
+              i.icon.comment
+              | 0 / 12
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/kwc.jpg")
+            .ui.label.online.status.gray
+          .info
+            .name 柯文哲
+            .position 台北市長候選人
+            .online.status.ui.label.gray 尚未回應邀請
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/gls.jpg")
+            .ui.label.online.status.green
+          .info
+            .name 顧立雄
+            .position 台北市長候選人
+            .online.status.ui.label.green 出席中
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/htt.jpg")
+            .ui.label.online.status.gray
+          .info
+            .name 許添財
+            .position 台北市長候選人
+            .online.status.ui.label.gray 尚未回應邀請
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/fkw.jpg")
+            .ui.label.online.status.green
+          .info
+            .name 馮光遠
+            .position 台北市長候選人
+            .online.status.ui.label.green 出席中
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 連勝文
+            .position 台北市長候選人
+            .online.status.ui.label.red 拒絕出席
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 郝龍斌
+            .position 現任台北市長
+            .online.status.ui.label.red 拒絕出席
+            .count
+              i.icon.comment
+              | 0 / 12
+        .ui.horizontal.divider.group.name 處長
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/kwc.jpg")
+            .ui.label.online.status.gray
+          .info
+            .name 柯文哲
+            .position 台北市長候選人
+            .online.status.ui.label.gray 尚未回應邀請
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/gls.jpg")
+            .ui.label.online.status.green
+          .info
+            .name 顧立雄
+            .position 台北市長候選人
+            .online.status.ui.label.green 出席中
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/htt.jpg")
+            .ui.label.online.status.gray
+          .info
+            .name 許添財
+            .position 台北市長候選人
+            .online.status.ui.label.gray 尚未回應邀請
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="img/fkw.jpg")
+            .ui.label.online.status.green
+          .info
+            .name 馮光遠
+            .position 台北市長候選人
+            .online.status.ui.label.green 出席中
+            .count
+              i.icon.comment
+              | 12 / 12
+              br
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 連勝文
+            .position 台北市長候選人
+            .online.status.ui.label.red 拒絕出席
+            .count
+              i.icon.comment
+              | 1 / 12
+              br
+              i.icon.star.green
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+              i.icon.star.red
+        a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 郝龍斌
+            .position 現任台北市長
+            .online.status.ui.label.red 拒絕出席
+            .count
+              i.icon.comment
+              | 0 / 12
+        //-a.politician.in.list.item(href="politician.html")
+          .ui.image(href="politician.html")
+            img(src="")
+            .ui.label.online.status.red
+          .info
+            .name 馬英九
+            | 前一任台北市長)
+            .count
+              i.icon.comment
+              | 0 / 12
+
+
+block script
+  script.
+    $("#navbar .roster").addClass("active");
+    $("#content .filter .hot").addClass("active");
