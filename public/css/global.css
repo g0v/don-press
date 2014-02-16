@@ -22,6 +22,19 @@ a, a:link {
   color: inherit;
 }
 
+.corner.label.dpp {
+  border-color: green;
+  color: white;
+}
+.corner.label.kmt {
+  border-color: blue;
+  color: white;
+}
+.corner.label.na {
+  border-color: gray;
+  color: white;
+}
+
 #tabmocracy {
   width: 960px;
   opacity: 0.8;
