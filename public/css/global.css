@@ -252,43 +252,43 @@ a, a:link {
 #content .answer.in.list .content h2 {
   margin: 0 0 0.5rem 0;
 }
-#content .answer.in.list .score {
+#content .answer.in.list .content .score {
   float: right;
 }
-#content .answer.in.list .score .support {
+#content .answer.in.list .content .score .support {
   display: inline-block;
   width: 5rem;
   height: 0.5rem;
   background-color: #eeeeee;
 }
-#content .answer.in.list .score .support .yes {
+#content .answer.in.list .content .score .support .yes {
   float: left;
   width: 50%;
   height: 100%;
   background-color: #a1cf64;
 }
-#content .answer.in.list .score .support .no {
+#content .answer.in.list .content .score .support .no {
   float: right;
   width: 30%;
   height: 100%;
   background-color: #d95c5c;
 }
-#content .answer.in.list .score .action .column {
+#content .answer.in.list .content .action .column {
   margin: 0;
 }
-#content .answer.in.list .score .action .column .rate {
+#content .answer.in.list .content .action .column .rate {
   margin: 0.5rem auto 0;
   text-align: center;
   font-size: 2rem;
 }
-#content .answer.in.list .score .action .column .rate .star {
+#content .answer.in.list .content .action .column .rate .star {
   color: #cccccc;
 }
-#content .answer.in.list .score .action .column .description {
+#content .answer.in.list .content .action .column .description {
   text-align: center;
   font-size: 1.2rem;
 }
-#content .answer.in.list .score .action .column .vote {
+#content .answer.in.list .content .action .column .vote {
   margin: 0.5rem auto 0;
   text-align: center;
 }
