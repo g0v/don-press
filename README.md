@@ -1,5 +1,8 @@
 動民主 2.0 家族 app：全民記者會
 ============
+
+[![Stories in Ready](https://badge.waffle.io/g0v/don-press.png?label=ready)](http://waffle.io/g0v/don-press)
+
 Using:
 * Sass
 * Compass
