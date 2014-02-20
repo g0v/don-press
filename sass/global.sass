@@ -78,7 +78,7 @@ a,a:link
 .ui.vertical.menu .item>.menu>.item
   font-size: 0.8rem
 
-// politician avatars and descriptions in a roster list
+// politician avatars and descriptions in roster list, either in homepage or roster page
 .politician.in.list
   min-height: 9rem
   width: auto
@@ -121,7 +121,7 @@ a,a:link
       .icon
         color: inherit
 
-// roster block in homepage and politician page
+// roster block in homepage and roster page
 #roster
   // the bg will be hidden in politician page bacause it's in the #content div, which has the same width as .board
   background: url("../img/roster-repeat.png"), linear-gradient(#a67c52, rgba(#754c24,1))
@@ -134,6 +134,7 @@ a,a:link
     border-top: 1px rgba(#fff,0.5) solid
     border-bottom: 5px #ccc solid
     +box-shadow(0 2px 5px rgba(#000,1))
+    // make roster list more compact in homepage (a.k.a. ask page)
     &.in.ask.page
       +box-sizing(content-box)
       margin: 0 auto
@@ -153,36 +154,44 @@ a,a:link
         height: 10rem
         margin-top: 0
         padding-top: 1rem
+    // the roster list has less limitation in roster page
     &.in.roster.page
       margin-top: -1rem
       padding: 1rem
       .group.name
         color: #eee
 
+// the grand content div
 #content
   clear: both
   width: 960px
   margin: 0.5rem auto
+  // give all the cute round semantic ui avatars a border
   .avatar
     +box-sizing(content-box)
     border: 2px #ccc solid
+    // the status icon on politician's head
     .icon
       position: absolute
       right: -0.5rem
       top: -0.5rem
+  // the funny status image for each question, showing how emergent the question is
   .question.status
     background: none
     width: 2rem
     height: 2rem
+  // make this specific semantic ui pointing label the same size as the ui button besides it, to make them look more harmonic
   .petition.count
     margin: 0 0 0 0.5rem
     padding: 0.8em
     font-size: 0.875rem
+  // give all text link a hover effect
   .text.link
     padding: 0.5rem
     &:hover
       +border-radius(0.3rem)
       background-color: rgba(#000,0.05)
+  // the question items in a question list
   .question.in.list
     padding: 0.3rem 0
     border-top: 1px #ccc solid
@@ -190,6 +199,7 @@ a,a:link
       display: inline
     .roster
       float: right
+  // the answer items in an answer list
   .answer.in.list
     margin-top: 1rem
     border-top: 1px #ccc dashed
@@ -205,9 +215,10 @@ a,a:link
       line-height: 1.5em
       margin-left: 4rem
       padding-top: 0rem
+      // while in answer page, there will be an additional question title
       h2
         margin: 0 0 0.5rem 0
-        //border-bottom: 1px #ccc solid
+      // the statistics of this answer
       .score
         float: right
         .support
@@ -225,6 +236,7 @@ a,a:link
             width: 30%
             height: 100%
             background-color: #D95C5C
+      // user actions for this answer
       .action
         .column
           margin: 0
@@ -242,7 +254,7 @@ a,a:link
           .vote
             margin: 0.5rem auto 0
             text-align: center
-
+  // new question and answer forms share some common styles
   .question.new, .answer.new
     .field.answer
       clear: none
@@ -251,7 +263,7 @@ a,a:link
       margin: 0.5rem 0
     .roster
       margin-bottom: 0
-
+  // new question in ask page (homepage)
   &.ask
     .question.new
       margin: 0.5rem 0
@@ -263,10 +275,13 @@ a,a:link
             padding: 0.7em 1em
             border: 1px solid rgba(0,0,0,.15)
             +border-radius(0.3125em)
+  // styles specific to question page
   &.question
+    // the author of this question
     .header
       .author
         float: right
+    // the meta block right below question description
     .meta
       .group
         display: inline-block
@@ -284,5 +299,6 @@ a,a:link
             overflow-x: hidden
             white-space: nowrap
             text-overflow: ellipsis
+    // related question block in the bottom of the page
     .related
       margin: 1rem 0
