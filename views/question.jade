@@ -147,11 +147,15 @@ block body
             textarea(placeholder="新回答...")
           // 要在上面的 input.title 框框按下 enter 後才會顯示
           .meta
-            .group.right
+            .group
               .ui.icon.labeled.button
                 img.ui.image.avatar(src="img/fkw.jpg")
                 | 確定送出
                 i.icon.checkmark
+            .group
+              .ui.checkbox
+                input(type="checkbox")
+                label 同步發表於我的 facebook
       .answer.in.list
         .ui.image.author
         .new.direct.answer.content.ui.form
@@ -184,12 +188,16 @@ block body
           .meta
             .group
               .ui.input.reference
-                input(type="text",placeholder="轉述來源網址",size="70")
-            .group.right
+                input(type="text",placeholder="轉述來源網址",size="30")
+            .group
               .ui.icon.labeled.button
                 img.ui.image.avatar(src="https://graph.facebook.com/1505331262/picture")
                 | 確定送出
                 i.icon.checkmark
+            .group
+              .ui.checkbox
+                input(type="checkbox")
+                label 同步發表於我的 facebook
       article.answer.in.list
         .ui.image.author
           a(href="")

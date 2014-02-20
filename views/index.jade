@@ -31,14 +31,19 @@ block content
         .group 類別
           .ui.dropdown.select 住房
             include categorymenu
-        span.text 社會事件
+        span.text 案件
         .group
-          input(type="text",placeholder="最多一組（用來畫分布圖的，輸入時會自動跳出現有的關鍵字當建議）")
-        .group.right
+          input(type="text",placeholder="如：文林苑、大埔…等（用來畫分布圖的，輸入時會自動跳出現有的關鍵字當建議）")
+      .meta
+        .group
           .ui.icon.labeled.button
             img.ui.image.avatar(src="https://graph.facebook.com/1505331262/picture")
             | 確定送出
             i.icon.checkmark
+        .group
+          .ui.checkbox
+            input(type="checkbox")
+            label 同步發表於我的 facebook
     .question.in.list
       .ui.icon.labeled.button.small.active.green 已連署
         i.icon.thumbs.up
