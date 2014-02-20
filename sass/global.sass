@@ -18,6 +18,7 @@ a,a:link
   text-decoration: none
   color: inherit
 
+// party icon on politician avatars
 .corner.label
   &.dpp
     border-color: green
@@ -29,11 +30,24 @@ a,a:link
     border-color: gray
     color: #fff
 
+// patch semantic ui black active button bug
+.ui.button.black.active
+  background-color: #5C6166
+  color: #FFF
+
+// make semantic ui avatar images fit in menu and buttons
+.ui.menu .item, .ui.button
+  .avatar
+    +box-sizing(border-box)
+    margin: -0.5rem 0.5rem -0.5rem 0
+
+// g0v version of tabzilla on the top
 #tabmocracy
   width: 960px
   opacity: 0.8
   margin: 0 auto
 
+// the grand navbar
 #navbar
   min-width: 960px
   height: 136px
@@ -55,20 +69,16 @@ a,a:link
   .filter
     min-width: 170px
     margin-right: 50px
-    //.menu
-      background-color: #ffe6e7
 
+// the location menu in navbar and new question form
 .geo.menu.vertical
   width: 170px
 
+// also for the location menu, make the font in semantic ui vertical submenu items bigger
 .ui.vertical.menu .item>.menu>.item
   font-size: 0.8rem
 
-.ui.menu .item, .ui.button
-  .avatar
-    +box-sizing(border-box)
-    margin: -0.5rem 0.5rem -0.5rem 0
-
+// politician avatars and descriptions in a roster list
 .politician.in.list
   min-height: 9rem
   width: auto
@@ -111,7 +121,9 @@ a,a:link
       .icon
         color: inherit
 
+// roster block in homepage and politician page
 #roster
+  // the bg will be hidden in politician page bacause it's in the #content div, which has the same width as .board
   background: url("../img/roster-repeat.png"), linear-gradient(#a67c52, rgba(#754c24,1))
   .group.name
     clear: both

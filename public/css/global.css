@@ -35,6 +35,18 @@ a, a:link {
   color: white;
 }
 
+.ui.button.black.active {
+  background-color: #5c6166;
+  color: white;
+}
+
+.ui.menu .item .avatar, .ui.button .avatar {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: -0.5rem 0.5rem -0.5rem 0;
+}
+
 #tabmocracy {
   width: 960px;
   opacity: 0.8;
@@ -75,13 +87,6 @@ a, a:link {
 
 .ui.vertical.menu .item > .menu > .item {
   font-size: 0.8rem;
-}
-
-.ui.menu .item .avatar, .ui.button .avatar {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: -0.5rem 0.5rem -0.5rem 0;
 }
 
 .politician.in.list {
