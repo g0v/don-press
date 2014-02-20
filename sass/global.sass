@@ -206,7 +206,7 @@ a,a:link
     padding-top: 1rem
     &:first-child
       border-top: none
-      padding-top: 0
+      //padding-top: 0
     .image.author
       width: 3rem
       height: 3rem
@@ -218,9 +218,13 @@ a,a:link
       // while in answer page, there will be an additional question title
       h2
         margin: 0 0 0.5rem 0
+        a
+          display: block
+          margin: -0.5rem 0 0 -0.5rem
       // the statistics of this answer
       .score
         float: right
+        margin-top: 0.25rem
         .support
           display: inline-block
           width: 5rem

@@ -246,7 +246,6 @@ a, a:link {
 }
 #content .answer.in.list:first-child {
   border-top: none;
-  padding-top: 0;
 }
 #content .answer.in.list .image.author {
   width: 3rem;
@@ -261,8 +260,13 @@ a, a:link {
 #content .answer.in.list .content h2 {
   margin: 0 0 0.5rem 0;
 }
+#content .answer.in.list .content h2 a {
+  display: block;
+  margin: -0.5rem 0 0 -0.5rem;
+}
 #content .answer.in.list .content .score {
   float: right;
+  margin-top: 0.25rem;
 }
 #content .answer.in.list .content .score .support {
   display: inline-block;
