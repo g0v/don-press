@@ -52,8 +52,6 @@ a,a:link
       background-color: rgba(#c1272d,0.1)
     .user
       white-space: nowrap
-      .avatar
-        margin: -0.5rem 0 -0.5rem -0.5rem
   .filter
     min-width: 170px
     margin-right: 50px
@@ -62,8 +60,14 @@ a,a:link
 
 .geo.menu.vertical
   width: 170px
+
 .ui.vertical.menu .item>.menu>.item
   font-size: 0.8rem
+
+.ui.menu .item, .ui.button
+  .avatar
+    +box-sizing(border-box)
+    margin: -0.5rem 0.5rem -0.5rem 0
 
 .politician.in.list
   min-height: 9rem
@@ -181,7 +185,7 @@ a,a:link
     &:first-child
       border-top: none
       padding-top: 0
-    .image
+    .image.author
       width: 3rem
       height: 3rem
       float: left
@@ -226,17 +230,19 @@ a,a:link
           .vote
             margin: 0.5rem auto 0
             text-align: center
+
+  .question.new, .answer.new
+    .field.answer
+      clear: none
+      margin: 0
+    .description, .meta
+      margin: 0.5rem 0
+    .roster
+      margin-bottom: 0
+
   &.ask
     .question.new
-      width: 100%
       margin: 0.5rem 0
-      border: none
-      .title
-        border: 2px #ccc dashed
-        .icon
-          padding: 1rem
-      .description
-        margin: 0
       .meta
         .group
           display: inline-block

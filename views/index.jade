@@ -21,10 +21,10 @@ block content
     .question.new.ui.form
       .ui.input
         input.title(type="text",placeholder="新問題...（一邊打字底下清單會一邊過濾出可能重複的類似問題…elastic search?）")
-      // 要在上面的 input.title 框框按下 enter 後才會顯示
-      //.field.description
+      // 以下兩排欄位要在上面的 input.title 框框按下 enter 後才會顯示
+      .field.description
         textarea(placeholder="詳細描述、參考連結")
-      //.meta
+      .meta
         .group 選區
           .ui.dropdown.select 台北市
             include geomenu
@@ -35,7 +35,9 @@ block content
         .group
           input(type="text",placeholder="最多一組（用來畫分布圖的，輸入時會自動跳出現有的關鍵字當建議）")
         .group.right
-          .ui.icon.labeled.button 確定送出
+          .ui.icon.labeled.button
+            img.ui.image.avatar(src="https://graph.facebook.com/1505331262/picture")
+            | 確定送出
             i.icon.checkmark
     .question.in.list
       .ui.icon.labeled.button.small.active.green 已連署
@@ -45,14 +47,12 @@ block content
         img(src="img/bad.png")
       a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
       .roster
-        a.item
-          .ui.image.avatar
-            img(src="img/kwc.jpg")
-            i.icon.question
-        a.item
-          .ui.image.avatar
-            img(src="img/htt.jpg")
-            i.icon.comment.green
+        .ui.image.avatar
+          img(src="img/kwc.jpg")
+          i.icon.question
+        .ui.image.avatar
+          img(src="img/htt.jpg")
+          i.icon.comment.green
         .ui.icon.button.small
           i.icon.add
     .question.in.list
@@ -63,18 +63,15 @@ block content
         img(src="img/blame.png")
       a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
       .roster
-        a.item
-          .ui.image.avatar
-            img(src="img/kwc.jpg")
-            i.icon.question
-        a.item
-          .ui.image.avatar
-            img(src="img/htt.jpg")
-            i.icon.question
-        a.item
-          .ui.image.avatar
-            img(src="img/gls.jpg")
-            i.icon.minus.sign.red
+        .ui.image.avatar
+          img(src="img/kwc.jpg")
+          i.icon.question
+        .ui.image.avatar
+          img(src="img/htt.jpg")
+          i.icon.question
+        .ui.image.avatar
+          img(src="img/gls.jpg")
+          i.icon.minus.sign.red
         .ui.icon.button.small
           i.icon.add
 
