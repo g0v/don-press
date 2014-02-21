@@ -41,6 +41,14 @@ a,a:link
     +box-sizing(border-box)
     margin: -0.5rem 0.5rem -0.5rem 0
 
+// add a custom color of label
+.ui.label.white
+  background: none
+
+.ui.menu .item .ui.label
+  vertical-align: inherit
+  margin: -0.3em 0 -0.3em 0.5em
+
 // g0v version of tabzilla on the top
 #tabmocracy
   width: 960px
@@ -191,10 +199,27 @@ a,a:link
     &:hover
       +border-radius(0.3rem)
       background-color: rgba(#000,0.05)
+  // average support rate for questions and politicians
+  .score
+    .support
+      display: inline-block
+      width: 5rem
+      height: 0.5rem
+      background-color: #eee
+      .yes
+        float: left
+        width: 50%
+        height: 100%
+        background-color: #A1CF64
+      .no
+        float: right
+        width: 30%
+        height: 100%
+        background-color: #D95C5C
   // the question items in a question list
   .question.in.list
     padding: 0.3rem 0
-    border-top: 1px #ccc solid
+    border-bottom: 1px #ddd solid
     .title
       display: inline
     .roster
@@ -221,25 +246,14 @@ a,a:link
         a
           display: block
           margin: -0.5rem 0 0 -0.5rem
-      // the statistics of this answer
-      .score
-        float: right
-        margin-top: 0.25rem
-        .support
-          display: inline-block
-          width: 5rem
-          height: 0.5rem
-          background-color: #eee
-          .yes
-            float: left
-            width: 50%
-            height: 100%
-            background-color: #A1CF64
-          .no
-            float: right
-            width: 30%
-            height: 100%
-            background-color: #D95C5C
+      .answer.meta
+        margin: 0
+        // statistics block of this answer
+        .score
+          float: right
+          margin-top: 0.45rem
+        .item:after
+          clear: none
       // user actions for this answer
       .action
         .column
@@ -279,6 +293,8 @@ a,a:link
             padding: 0.7em 1em
             border: 1px solid rgba(0,0,0,.15)
             +border-radius(0.3125em)
+    .list.section
+      border-top: 1px #ddd solid
   // styles specific to question page
   &.question
     // the author of this question
@@ -306,3 +322,45 @@ a,a:link
     // related question block in the bottom of the page
     .related
       margin: 1rem 0
+  &.politician
+    margin-top: 0
+    .summary
+      background-color: #333
+      color: #eee
+      padding-top: 1rem
+      .photo
+        width: 10rem
+        height: 10rem
+        position: absolute
+        margin-top: -1rem
+      .description
+        position: relative
+        margin: 0 1rem 0 11rem
+        min-height: 9rem
+        h1 .ui.label
+          color: inherit
+          font-size: 1rem
+    .data.menu
+      margin-top: 0
+    .category.menu
+      position: absolute
+      margin-top: 0
+    .list.content
+      margin-left: 16rem
+    .question.in.list
+      .politician.answer.status
+        float: right
+        margin-top: 0.5rem
+        .score
+          margin-top: 0.1rem
+    .answer.in.list
+      .content
+        margin-left: 0
+        .answer.meta
+          .score
+            float: none
+            margin: 0.5rem 0
+        .action
+          .description
+            font-size: 1rem
+

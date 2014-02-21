@@ -6,7 +6,8 @@ block title
 block content
   #content.ask
     .ui.secondary.pointing.menu.filter
-      .ui.dropdown.item 所有類別 (1024)
+      .ui.dropdown.item 所有類別
+        .ui.label 1024
         include categorymenu
       a.item.hot 熱門
       a.item.new 最新
@@ -29,7 +30,7 @@ block content
           .ui.dropdown.select 台北市
             include geomenu
         .group 類別
-          .ui.dropdown.select 住房
+          .ui.dropdown.select 土地、都市計畫、住房
             include categorymenu
         span.text 案件
         .group
@@ -44,41 +45,42 @@ block content
           .ui.checkbox
             input(type="checkbox")
             label 同步發表於我的 facebook
-    .question.in.list
-      .ui.icon.labeled.button.small.active.green 已連署
-        i.icon.thumbs.up
-      .ui.left.pointing.label.petition.count 999
-      .ui.image.question.status
-        img(src="img/bad.png")
-      a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
-      .roster
-        .ui.image.avatar
-          img(src="img/kwc.jpg")
-          i.icon.question
-        .ui.image.avatar
-          img(src="img/htt.jpg")
-          i.icon.comment.green
-        .ui.icon.button.small
-          i.icon.add
-    .question.in.list
-      .ui.icon.labeled.button.small 加入連署
-        i.icon.thumbs.up
-      .ui.left.pointing.label.petition.count 99
-      .ui.image.question.status
-        img(src="img/blame.png")
-      a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
-      .roster
-        .ui.image.avatar
-          img(src="img/kwc.jpg")
-          i.icon.question
-        .ui.image.avatar
-          img(src="img/htt.jpg")
-          i.icon.question
-        .ui.image.avatar
-          img(src="img/gls.jpg")
-          i.icon.minus.sign.red
-        .ui.icon.button.small
-          i.icon.add
+    section.list.section
+      .question.in.list
+        .ui.icon.labeled.button.small.active.green 已連署
+          i.icon.thumbs.up
+        .ui.left.pointing.label.petition.count 999
+        .ui.image.question.status
+          img(src="img/bad.png")
+        a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
+        .roster
+          .ui.image.avatar
+            img(src="img/kwc.jpg")
+            i.icon.question
+          .ui.image.avatar
+            img(src="img/htt.jpg")
+            i.icon.comment.green
+          .ui.icon.button.small
+            i.icon.add
+      .question.in.list
+        .ui.icon.labeled.button.small 加入連署
+          i.icon.thumbs.up
+        .ui.left.pointing.label.petition.count 99
+        .ui.image.question.status
+          img(src="img/blame.png")
+        a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
+        .roster
+          .ui.image.avatar
+            img(src="img/kwc.jpg")
+            i.icon.question
+          .ui.image.avatar
+            img(src="img/htt.jpg")
+            i.icon.question
+          .ui.image.avatar
+            img(src="img/gls.jpg")
+            i.icon.minus.sign.red
+          .ui.icon.button.small
+            i.icon.add
 
 
 block script

@@ -47,6 +47,15 @@ a, a:link {
   margin: -0.5rem 0.5rem -0.5rem 0;
 }
 
+.ui.label.white {
+  background: none;
+}
+
+.ui.menu .item .ui.label {
+  vertical-align: inherit;
+  margin: -0.3em 0 -0.3em 0.5em;
+}
+
 #tabmocracy {
   width: 960px;
   opacity: 0.8;
@@ -229,9 +238,27 @@ a, a:link {
   border-radius: 0.3rem;
   background-color: rgba(0, 0, 0, 0.05);
 }
+#content .score .support {
+  display: inline-block;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: #eeeeee;
+}
+#content .score .support .yes {
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #a1cf64;
+}
+#content .score .support .no {
+  float: right;
+  width: 30%;
+  height: 100%;
+  background-color: #d95c5c;
+}
 #content .question.in.list {
   padding: 0.3rem 0;
-  border-top: 1px #cccccc solid;
+  border-bottom: 1px #dddddd solid;
 }
 #content .question.in.list .title {
   display: inline;
@@ -264,27 +291,15 @@ a, a:link {
   display: block;
   margin: -0.5rem 0 0 -0.5rem;
 }
-#content .answer.in.list .content .score {
+#content .answer.in.list .content .answer.meta {
+  margin: 0;
+}
+#content .answer.in.list .content .answer.meta .score {
   float: right;
-  margin-top: 0.25rem;
+  margin-top: 0.45rem;
 }
-#content .answer.in.list .content .score .support {
-  display: inline-block;
-  width: 5rem;
-  height: 0.5rem;
-  background-color: #eeeeee;
-}
-#content .answer.in.list .content .score .support .yes {
-  float: left;
-  width: 50%;
-  height: 100%;
-  background-color: #a1cf64;
-}
-#content .answer.in.list .content .score .support .no {
-  float: right;
-  width: 30%;
-  height: 100%;
-  background-color: #d95c5c;
+#content .answer.in.list .content .answer.meta .item:after {
+  clear: none;
 }
 #content .answer.in.list .content .action .column {
   margin: 0;
@@ -331,6 +346,9 @@ a, a:link {
   -o-border-radius: 0.3125em;
   border-radius: 0.3125em;
 }
+#content.ask .list.section {
+  border-top: 1px #dddddd solid;
+}
 #content.question .header .author {
   float: right;
 }
@@ -356,4 +374,54 @@ a, a:link {
 }
 #content.question .related {
   margin: 1rem 0;
+}
+#content.politician {
+  margin-top: 0;
+}
+#content.politician .summary {
+  background-color: #333333;
+  color: #eeeeee;
+  padding-top: 1rem;
+}
+#content.politician .summary .photo {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  margin-top: -1rem;
+}
+#content.politician .summary .description {
+  position: relative;
+  margin: 0 1rem 0 11rem;
+  min-height: 9rem;
+}
+#content.politician .summary .description h1 .ui.label {
+  color: inherit;
+  font-size: 1rem;
+}
+#content.politician .data.menu {
+  margin-top: 0;
+}
+#content.politician .category.menu {
+  position: absolute;
+  margin-top: 0;
+}
+#content.politician .list.content {
+  margin-left: 16rem;
+}
+#content.politician .question.in.list .politician.answer.status {
+  float: right;
+  margin-top: 0.5rem;
+}
+#content.politician .question.in.list .politician.answer.status .score {
+  margin-top: 0.1rem;
+}
+#content.politician .answer.in.list .content {
+  margin-left: 0;
+}
+#content.politician .answer.in.list .content .answer.meta .score {
+  float: none;
+  margin: 0.5rem 0;
+}
+#content.politician .answer.in.list .content .action .description {
+  font-size: 1rem;
 }

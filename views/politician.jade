@@ -1,30 +1,121 @@
 extends _template
 
 block title
-  | 給分
+  | 人物：馮光遠
 
 block body
-  #content.answer
-    .ui.secondary.pointing.menu.filter
-      .ui.dropdown.item 所有類別
-        .ui.label 1024
-        include categorymenu
-      a.item.hot 熱門
-      a.item.new 最新
-      a.item.rate 得分最高
-      a.item.support 支持度最高
+  #content.politician(ng-init="mode='question';category='on'")
+    header.summary
+      .ui.image.photo
+        img(src="img/fkw.jpg")
+      .description
+        h1 馮光遠
+          .online.status.ui.label.green 出席中
+          .ui.label.white.score
+            | 得分
+            i.icon.star.green
+            i.icon.star.green
+            i.icon.star.green
+            i.icon.star.green
+            i.icon.star.red
+            | 　支持度
+            .support
+              .yes
+              .no
+        .ui.top.right.attached.label.black.na 無黨籍
+          i.icon.sun
+        .ui.list
+          .item
+            .ui.label.black 回答身份
+            | 台北市長候選人
+          .item
+            .ui.label.black 現任
+            | 〈給我報報〉創辦人、憲法133實踐聯盟發起人、台北藝術大學電影創作研究所副教授
+          .item
+            .ui.label.black 曾任
+            | 《中國時報》主筆、《中國時報》副總編輯、金石堂書店行銷創意總監
+    nav.ui.menu.data
+      a.item.question(ng-click="mode='question';category='on'") 被問
+        .ui.label 102
+      a.item.answer(ng-click="mode='answer';category='on'") 回答
+        .ui.label 12
+      a.item.view(ng-click="mode='view';category='on'") 政見總覽
+      a.item.file(ng-click="mode='file';category='off'") 個人檔案
       .item.right
         .ui.icon.input
           input(type="text",placeholder="搜尋...",ng-model="keyword")
           i.search.link.icon
-    section
+    nav.ui.vertical.menu.category(ng-show="category=='on'")
+      a.item.active 所有類別
+        .ui.label 102
+      a.item 國防、外交
+        .ui.label 9
+      a.item 民主、司法、法制
+        .ui.label 9
+      a.item 財政、稅制
+        .ui.label 9
+      a.item 開放政府資料
+        .ui.label 9
+      a.item 科技、網路
+        .ui.label 9
+      a.item 教育、文化
+        .ui.label 9
+      a.item 大眾傳播、媒體
+        .ui.label 9
+      a.item 人權、性別、少數族裔
+        .ui.label 9
+      a.item 社會福利、殘障、弱勢
+        .ui.label 9
+      a.item 醫療、保健、衛生
+        .ui.label 9
+      a.item 環境、生態、水土保持
+        .ui.label 9
+      a.item 能源、氣候
+        .ui.label 9
+      a.item 農業、糧食、食品安全
+        .ui.label 9
+      a.item 土地、都市計畫、住房
+        .ui.label 9
+      a.item 交通
+        .ui.label 9
+      a.item 就業、經濟
+        .ui.label 9
+      a.item 產業、原物料、廢棄物
+        .ui.label 9
+      a.item 治安、犯罪
+        .ui.label 9
+      a.item 休閒、運動、娛樂
+        .ui.label 9
+    section.list.content(ng-show="mode=='question'")
+      .question.in.list
+        .ui.icon.labeled.button.small.active.green 已連署
+          i.icon.thumbs.up
+        .ui.left.pointing.label.petition.count 999
+        a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
+        .politician.answer.status
+          .score 得分
+            i.icon.star.green
+            i.icon.star.green
+            i.icon.star.green
+            i.icon.star.green
+            i.icon.star.red
+      .question.in.list
+        .ui.icon.labeled.button.small 加入連署
+          i.icon.thumbs.up
+        .ui.left.pointing.label.petition.count 99
+        a.title.text.link(href="question.html") 文林苑的案子打算怎麼處理？
+        .politician.answer.status
+          .ui.label
+            | 未作答
+    section.list.content(ng-show="mode=='answer'")
       article.answer.in.list
-        .ui.image.author
-          a(href="")
-            img(src="img/fkw.jpg")
         .content
           h2: a.text.link(href="question.html") 文林苑的案子打算怎麼處理？
           .answer.meta.ui.list
+            .item
+              | 以台北市長候選人身份
+              .ui.label.green 親自作答
+              | 於 2014/02/14
             .score
               | 本題得分
               i.icon.star.green
@@ -36,10 +127,6 @@ block body
               .support
                 .yes
                 .no
-            .item
-              | 馮光遠 (台北市長候選人)
-              .ui.label.green 親自作答
-              | 於 2014/02/14
           p 僅七、八歲時的狀況，誰都有義務分擔，不趕他出去，他們在平時，失了伴侶的他，店舖簷前的天燈，甲吐出那飽吸過的香煙，但這是所謂大勢，僅七、八歲時的狀況，以為是他的同伴跟在後頭，不知談論些什麼，很好，所有的戰士已都死去，有什麼科派捐募，怎麼就十五年了。完全被過年和金錢所捉弄，透過了衣衫，宛然行於清麗的山徑，四方雲集，意外地竟得生存，錢的可能性愈少，實在是無意義的競爭，人們不預承認，也自隆隆地替它號令。不曉得順這機會，握著有很大權威，在冷風中戰慄著，有什麼科派捐募，和他們一拚！因為一片暗黑，現在只就所謂有相當文化的根據，不聲不響地，這是如何地悲悽！這不是和舊時代的天子，在他們社會裡，各要爭個體面，觸進人們的肌膚，悠揚地幾聲洞簫，捨此一身和他一拚！生性如此，那更不成問題，也分得出處處瀦留的水光，到大街上玩去罷，那邊有些人，好久已無聲響的雷，孩子們得到指示，這時候街上的男人們，一到夜裡，就發達繁昌起來，在環繞太陽運轉，他倆疲倦了，這是多麼傷心的事啊！
           .ui.grid.action
             .eight.wide.column
@@ -61,18 +148,24 @@ block body
               .ui.segment 以上政見你支持嗎？
                 .vote
                   .ui.buttons
-                    .ui.icon.labeled.button 支持
-                      i.icon.thumbs.up
-                    .ui.button.black.active 不確定
-                    .ui.right.icon.labeled.button 反對
-                      i.icon.thumbs.down
+                    .ui.small.button 支持
+                    .ui.small.button.black.active 不確定
+                    .ui.small.button 反對
       article.answer.in.list
-        .ui.image.author
-          a(href="")
-            img(src="img/htt.jpg")
         .content
           h2: a.text.link(href="question.html") 文林苑的案子打算怎麼處理？
           .answer.meta.ui.list
+            //.item
+              | 馮光遠 (台北市長候選人)
+            .item
+              | 以台北市長候選人身份
+              .ui.label.green 網友轉述作答
+              | 於 2014/02/14
+            .item
+              | 由
+              a(href="") 都更受害者聯盟
+              | 轉述自
+              a(href="") 蘋果日報
             .score
               | 本題得分
               i.icon.star.green
@@ -84,15 +177,6 @@ block body
               .support
                 .yes
                 .no
-            .item
-              | 許添財 (台北市長候選人)
-              .ui.label.green 網友轉述作答
-              | 於 2014/02/14
-            .item
-              | 由
-              a(href="") 都更受害者聯盟
-              | 轉述自
-              a(href="") 蘋果日報
           p 僅七、八歲時的狀況，誰都有義務分擔，不趕他出去，他們在平時，失了伴侶的他，店舖簷前的天燈，甲吐出那飽吸過的香煙，但這是所謂大勢，僅七、八歲時的狀況，以為是他的同伴跟在後頭，不知談論些什麼，很好，所有的戰士已都死去，有什麼科派捐募，怎麼就十五年了。完全被過年和金錢所捉弄，透過了衣衫，宛然行於清麗的山徑，四方雲集，意外地竟得生存，錢的可能性愈少，實在是無意義的競爭，人們不預承認，也自隆隆地替它號令。不曉得順這機會，握著有很大權威，在冷風中戰慄著，有什麼科派捐募，和他們一拚！因為一片暗黑，現在只就所謂有相當文化的根據，不聲不響地，這是如何地悲悽！這不是和舊時代的天子，在他們社會裡，各要爭個體面，觸進人們的肌膚，悠揚地幾聲洞簫，捨此一身和他一拚！生性如此，那更不成問題，也分得出處處瀦留的水光，到大街上玩去罷，那邊有些人，好久已無聲響的雷，孩子們得到指示，這時候街上的男人們，一到夜裡，就發達繁昌起來，在環繞太陽運轉，他倆疲倦了，這是多麼傷心的事啊！
           .ui.grid.action
             .eight.wide.column
@@ -114,14 +198,12 @@ block body
               .ui.segment 以上政見你支持嗎？
                 .vote
                   .ui.buttons
-                    .ui.icon.labeled.button.active.green 支持
-                      i.icon.thumbs.up
-                    .ui.button 不確定
-                    .ui.right.icon.labeled.button 反對
-                      i.icon.thumbs.down
+                    .ui.small.button.active.green 支持
+                    .ui.small.button 不確定
+                    .ui.small.button 反對
 
 
 block script
   script.
-    $("#navbar .answer").addClass("active");
-    $("#content .filter .hot").addClass("active");
+    $("#navbar .roster").addClass("active");
+    $("#content .data .question").addClass("active");
